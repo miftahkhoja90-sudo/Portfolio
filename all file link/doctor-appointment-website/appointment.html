@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - MediCare Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>MediCare</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="appointment.html" class="active">Appointment</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Book Your Appointment</h1>
+                <p>Fill in your details and select your preferred doctor, date, and time. We will confirm your appointment shortly.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container appointment-layout">
+                <div class="appointment-main">
+                    <h2>Appointment Details</h2>
+                    <form class="appointment-form card" id="appointment-form-full">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name">Patient Name</label>
+                                <input type="text" id="full-name" name="patient_name" placeholder="Enter full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="full-email">Email Address</label>
+                                <input type="email" id="full-email" name="email" placeholder="Enter email address">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-phone">Phone Number</label>
+                                <input type="tel" id="full-phone" name="phone" placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="full-department">Department</label>
+                                <select id="full-department" name="department">
+                                    <option value="">Select department</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Dental">Dental</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-doctor">Select Doctor</label>
+                                <select id="full-doctor" name="doctor">
+                                    <option value="">Select doctor</option>
+                                    <option value="Dr. Sarah Johnson">Dr. Sarah Johnson (Cardiology)</option>
+                                    <option value="Dr. Michael Lee">Dr. Michael Lee (Neurology)</option>
+                                    <option value="Dr. Emily Brown">Dr. Emily Brown (Pediatrics)</option>
+                                    <option value="Dr. Robert King">Dr. Robert King (Dental)</option>
+                                    <option value="Dr. Ethan Scott">Dr. Ethan Scott (Orthopedics)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="full-date">Preferred Date</label>
+                                <input type="date" id="full-date" name="date">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-time">Preferred Time Slot</label>
+                                <select id="full-time" name="time">
+                                    <option value="">Select time slot</option>
+                                    <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                                    <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                    <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                    <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                                    <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                                    <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="full-message">Message / Symptoms (Optional)</label>
+                            <textarea id="full-message" name="message" rows="4" placeholder="Describe your symptoms or reason for visit"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Confirm Appointment</button>
+                            <p class="form-note"><i class="fa-solid fa-circle-info"></i> You will receive an SMS and email confirmation after review.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="appointment-aside">
+                    <div class="card appointment-info">
+                        <h3>Need Help Booking?</h3>
+                        <p>Our support team is here to assist you with choosing the right doctor and time.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> Call: +1 800 123 4567</li>
+                            <li><i class="fa-solid fa-envelope"></i> Email: support@medicarehospital.com</li>
+                            <li><i class="fa-solid fa-clock"></i> Mon - Sat, 8:00 AM - 8:00 PM</li>
+                        </ul>
+                    </div>
+                    <div class="card appointment-note">
+                        <h3>Important Notes</h3>
+                        <ul>
+                            <li>Please arrive 15 minutes before your scheduled time.</li>
+                            <li>Carry your previous medical records and ID proof.</li>
+                            <li>For emergency cases, visit our emergency department directly.</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>MediCare Hospital</h3>
+                <p>Delivering world-class healthcare with compassion, innovation, and excellence.</p>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Health Street, Wellness City</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 800 123 4567</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@medicarehospital.com</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Patient Resources</h4>
+                <ul>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Insurance Information</a></li>
+                    <li><a href="#">Visitor Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> MediCare Hospital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Appointment Success Modal -->
+    <div class="modal" id="appointment-success" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Appointment Confirmed</h2>
+            <p>Your appointment request has been submitted successfully. We will contact you soon with confirmation.</p>
+            <button class="btn btn-primary modal-ok">OK</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3fu41g2psp6QaWw3j5n8ssE6tKp9u7l6c2l9gqkXh7E=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="jquery/jquery.min.js"><\\/script>');</script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

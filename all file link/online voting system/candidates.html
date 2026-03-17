@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Candidates · SecureVote Online Voting System</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div class="nav-title-group">
+            <span class="nav-title">SecureVote</span>
+            <span class="nav-subtitle">Online Voting System</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="candidates.html">Candidates</a>
+          <a href="vote.html">Vote</a>
+          <a href="results.html">Results</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a
+            href="login.html"
+            class="btn btn-outline"
+          >
+            <i class="fa-regular fa-user"></i>
+            Login
+          </a>
+          <a
+            href="register.html"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-id-card"></i>
+            Register
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <div class="container">
+        <section>
+          <header class="section-header">
+            <div class="section-kicker">Directory</div>
+            <h1 class="section-title">Candidates in this election</h1>
+            <p class="section-subtitle">
+              Browse all candidates, their positions, and party affiliations. In a real
+              system, this data would be loaded dynamically from a backend.
+            </p>
+          </header>
+
+          <div class="candidate-grid">
+            <!-- Candidate 1 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Amara Ndlovu</h3>
+                  <div class="candidate-meta">
+                    Unity Alliance · President<br />
+                    Faculty of Social Sciences
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Amara is focused on fair representation, open budgeting and safety
+                initiatives across campus, including better lighting and late‑night
+                transport.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-scale-unbalanced"></i>
+                  Manifesto: Transparency
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <!-- Candidate 2 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Daniel Martinez</h3>
+                  <div class="candidate-meta">
+                    Progress Party · Vice President<br />
+                    Faculty of Business
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Daniel campaigns on financial support, fair tuition policies and mental
+                health resources, with clear budget proposals for each pledge.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                  Manifesto: Wellbeing
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <!-- Candidate 3 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Leila Chen</h3>
+                  <div class="candidate-meta">
+                    FutureNow · Technology Secretary<br />
+                    Faculty of Engineering
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Leila wants faster Wi‑Fi, more study spaces, better lab equipment and
+                open‑source tools that students can build on.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-microchip"></i>
+                  Manifesto: Digital campus
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <!-- Candidate 4 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Noah Singh</h3>
+                  <div class="candidate-meta">
+                    Greens Coalition · Welfare Officer<br />
+                    Faculty of Health Sciences
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Noah focuses on campus wellbeing, sustainable policies and inclusive
+                spaces, with plans for peer‑support training.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-leaf"></i>
+                  Manifesto: Sustainability
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <!-- Candidate 5 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-pen"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Elena Rossi</h3>
+                  <div class="candidate-meta">
+                    Voice · Communications Officer<br />
+                    Faculty of Arts
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Elena pledges better communication between faculty and students, more
+                creative events, and clear reporting on council decisions.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-bullhorn"></i>
+                  Manifesto: Communication
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <!-- Candidate 6 -->
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Yusuf Ahmed</h3>
+                  <div class="candidate-meta">
+                    Unity Alliance · Diversity Officer<br />
+                    Faculty of Law
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Yusuf is committed to inclusion, equal representation, and accessible
+                policies for international and distance‑learning students.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-people-group"></i>
+                  Manifesto: Inclusion
+                </span>
+                <a
+                  href="vote.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <div class="nav-logo">
+                <i class="fa-solid fa-shield-check"></i>
+              </div>
+              <div class="nav-title-group">
+                <span class="nav-title">SecureVote</span>
+                <span class="nav-subtitle">Online Voting System</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 0.82rem">
+              Candidate information is provided by your institution and should reflect the
+              latest verified details.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Next steps</h4>
+            <ul class="footer-links">
+              <li><a href="vote.html">Go to voting page</a></li>
+              <li><a href="results.html">Check election results</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Help</h4>
+            <ul class="footer-links">
+              <li><a href="faq.html">How do I vote?</a></li>
+              <li><a href="contact.html">Contact the election team</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SecureVote. Demo candidate directory.</span>
+          <div class="social-row">
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4j5C2R4U6H0k8mxn5Q5rK4P6D6s9E7l3KqzUQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

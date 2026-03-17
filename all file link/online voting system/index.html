@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SecureVote | Online Voting System</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div class="nav-title-group">
+            <span class="nav-title">SecureVote</span>
+            <span class="nav-subtitle">Online Voting System</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="candidates.html">Candidates</a>
+          <a href="vote.html">Vote</a>
+          <a href="results.html">Results</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a
+            href="login.html"
+            class="btn btn-outline"
+          >
+            <i class="fa-regular fa-user"></i>
+            Login
+          </a>
+          <a
+            href="register.html"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-id-card"></i>
+            Register
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <div class="container">
+        <!-- Hero -->
+        <section
+          id="hero"
+          class="hero"
+        >
+          <div class="hero-grid">
+            <div>
+              <div class="hero-badge-row">
+                <div class="hero-badge">
+                  <i class="fa-solid fa-lock"></i>
+                  Bank‑grade encryption · Verified voters
+                </div>
+              </div>
+              <h1 class="hero-title">
+                Secure, transparent
+                <span>online voting</span>
+                for your next election.
+              </h1>
+              <p class="hero-subtitle">
+                SecureVote empowers institutions to run end‑to‑end encrypted elections that
+                are accessible from any device, with real‑time turnout insights and
+                instant result visibility.
+              </p>
+
+              <div class="hero-cta-row">
+                <a
+                  href="vote.html"
+                  class="btn btn-primary"
+                >
+                  <i class="fa-solid fa-circle-check"></i>
+                  Vote Now
+                </a>
+                <a
+                  href="about.html"
+                  class="btn btn-outline"
+                >
+                  <i class="fa-solid fa-circle-info"></i>
+                  How it works
+                </a>
+              </div>
+
+              <div class="hero-meta">
+                <div class="hero-meta-item">
+                  <span class="hero-meta-dot"></span>
+                  Live election:
+                  <strong>&nbsp;2026 Student Council</strong>
+                </div>
+                <div class="hero-meta-item">
+                  <i class="fa-solid fa-users-line"></i>
+                  Trusted by universities, unions &amp; communities worldwide.
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-panel">
+              <div class="hero-panel-inner">
+                <div class="hero-panel-header">
+                  <div class="hero-election-tag">
+                    <span></span>
+                    Turnout Monitor · Live
+                  </div>
+                  <div class="hero-countdown">
+                    <i class="fa-regular fa-clock"></i>
+                    Ends in 02:15:37
+                  </div>
+                </div>
+
+                <div class="hero-stats-grid js-observe-stats">
+                  <div class="stat-card">
+                    <div class="stat-label">Registered voters</div>
+                    <div
+                      class="stat-value"
+                      data-count-to="24580"
+                    >
+                      0
+                    </div>
+                    <div class="stat-trend">
+                      <i class="fa-solid fa-arrow-up-right"></i>
+                      +12.4% vs last election
+                    </div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-label">Votes cast</div>
+                    <div
+                      class="stat-value"
+                      data-count-to="17342"
+                    >
+                      0
+                    </div>
+                    <div class="stat-trend">
+                      <i class="fa-solid fa-bolt"></i>
+                      71% turnout so far
+                    </div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-label">Open positions</div>
+                    <div
+                      class="stat-value"
+                      data-count-to="12"
+                    >
+                      0
+                    </div>
+                    <div class="stat-trend">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                      Audited &amp; verified
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-timeline">
+                  <div class="timeline-row">
+                    <div>Election phases</div>
+                    <div class="timeline-pills">
+                      <span class="timeline-pill">Registration</span>
+                      <span class="timeline-pill">Voting</span>
+                      <span class="timeline-pill">Results</span>
+                    </div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>
+                      <i class="fa-regular fa-calendar"></i>
+                      03 Mar – 10 Mar, 2026
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-fingerprint"></i>
+                      2‑factor verification enabled
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- How Voting Works -->
+        <section id="how-it-works">
+          <header class="section-header">
+            <div class="section-kicker">Process</div>
+            <h2 class="section-title">How secure online voting works</h2>
+            <p class="section-subtitle">
+              A simple four‑step flow that keeps ballots private while ensuring the
+              integrity of every vote.
+            </p>
+          </header>
+          <div class="steps-grid">
+            <article class="step-card">
+              <div class="step-index">01</div>
+              <h3 class="step-title">Register &amp; verify identity</h3>
+              <p class="step-body">
+                Create your voter account, verify your email, and complete identity checks
+                configured by your institution.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-index">02</div>
+              <h3 class="step-title">Review candidates</h3>
+              <p class="step-body">
+                Explore candidate manifestos, party affiliations, and experience before
+                casting your ballot.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-index">03</div>
+              <h3 class="step-title">Cast your encrypted ballot</h3>
+              <p class="step-body">
+                Submit your vote from any device. Ballots are encrypted client‑side and
+                stored anonymously.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-index">04</div>
+              <h3 class="step-title">Instant verifiable results</h3>
+              <p class="step-body">
+                Once polls close, results are tallied and published instantly with an
+                auditable trail.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Featured Candidates -->
+        <section id="featured-candidates">
+          <header class="section-header">
+            <div class="section-kicker">Candidates</div>
+            <h2 class="section-title">Featured candidates this election</h2>
+            <p class="section-subtitle">
+              Explore a snapshot of top‑profile candidates. View the full list on the
+              dedicated candidates page.
+            </p>
+          </header>
+
+          <div class="candidate-grid">
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Amara Ndlovu</h3>
+                  <div class="candidate-meta">
+                    Unity Alliance · President<br />
+                    8 years of student leadership experience.
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Running on a platform of transparency, campus safety, and better funding
+                for student innovation labs.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-bullhorn"></i>
+                  Manifesto first
+                </span>
+                <a
+                  href="candidates.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Daniel Martinez</h3>
+                  <div class="candidate-meta">
+                    Progress Party · Vice President<br />
+                    Advocating for financial aid reform.
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Focused on fair tuition policies, mental health support, and expanding
+                scholarships for under‑represented groups.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-seedling"></i>
+                  Student wellbeing
+                </span>
+                <a
+                  href="candidates.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+
+            <article class="candidate-card">
+              <div class="candidate-header">
+                <div class="candidate-avatar">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div>
+                  <h3 style="margin: 0 0 4px">Leila Chen</h3>
+                  <div class="candidate-meta">
+                    FutureNow · Technology Secretary<br />
+                    Building smarter digital campuses.
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-muted">
+                Committed to better digital services, open‑source student projects, and
+                secure, privacy‑first campus technology.
+              </p>
+              <div class="candidate-footer">
+                <span class="tag">
+                  <i class="fa-solid fa-cloud-bolt"></i>
+                  Digital campus
+                </span>
+                <a
+                  href="candidates.html"
+                  class="btn btn-outline"
+                  style="padding-inline: 12px; font-size: 0.8rem"
+                >
+                  View profile
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Election Statistics & Announcements -->
+        <section id="stats">
+          <div class="grid-3">
+            <article class="card">
+              <header class="card-header-row">
+                <div>
+                  <div class="section-kicker">Analytics</div>
+                  <h3 class="section-title" style="font-size: 1.1rem">
+                    Live election statistics
+                  </h3>
+                </div>
+                <span class="pill">
+                  <i class="fa-solid fa-wave-square"></i>
+                  Realtime
+                </span>
+              </header>
+              <div class="stats-row">
+                <div class="mini-stat">
+                  <div class="mini-stat-label">Eligible voters</div>
+                  <div
+                    class="mini-stat-value"
+                    data-count-to="30000"
+                  >
+                    0
+                  </div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-label">Ballots submitted</div>
+                  <div
+                    class="mini-stat-value"
+                    data-count-to="19420"
+                  >
+                    0
+                  </div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-label">Turnout</div>
+                  <div
+                    class="mini-stat-value"
+                    data-count-to="65"
+                  >
+                    0
+                  </div>
+                  <div class="form-note">Target: 70%</div>
+                </div>
+              </div>
+              <p class="text-muted" style="font-size: 0.8rem">
+                Administrators can monitor turnout in real time, filter by faculty, year,
+                or custom segments, and intervene early if groups are under‑represented.
+              </p>
+            </article>
+
+            <article class="card">
+              <header class="card-header-row">
+                <div>
+                  <div class="section-kicker">News</div>
+                  <h3 class="section-title" style="font-size: 1.1rem">
+                    Announcements
+                  </h3>
+                </div>
+                <span class="pill">
+                  <i class="fa-regular fa-bell"></i>
+                  Updates
+                </span>
+              </header>
+              <ul class="announcement-list">
+                <li class="announcement-item">
+                  <div>
+                    Voting window extended by 2 hours due to high demand on mobile.
+                    <div class="announcement-date">
+                      <i class="fa-regular fa-clock"></i>
+                      7 Mar 2026 · 14:15
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-bolt"></i>
+                </li>
+                <li class="announcement-item">
+                  Candidate Q&amp;A sessions will be live‑streamed tonight at 19:00.
+                  <div class="announcement-date">
+                    <i class="fa-regular fa-clock"></i>
+                    6 Mar 2026 · 10:45
+                  </div>
+                </li>
+                <li class="announcement-item">
+                  Two‑factor authentication is now mandatory for all admin logins.
+                  <div class="announcement-date">
+                    <i class="fa-regular fa-clock"></i>
+                    5 Mar 2026 · 09:05
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header class="card-header-row">
+                <div>
+                  <div class="section-kicker">Security</div>
+                  <h3 class="section-title" style="font-size: 1.1rem">
+                    Trust &amp; transparency
+                  </h3>
+                </div>
+                <span class="pill">
+                  <i class="fa-solid fa-fingerprint"></i>
+                  Zero‑knowledge
+                </span>
+              </header>
+              <p class="text-muted" style="font-size: 0.84rem">
+                SecureVote uses verifiable cryptographic protocols, fingerprint‑protected
+                admin access, and tamper‑evident audit logs so that every ballot can be
+                counted — and recounted — transparently.
+              </p>
+              <ul class="announcement-list mt-3">
+                <li class="announcement-item">
+                  <span>
+                    <strong>End‑to‑end encryption</strong><br />
+                    Ballots are encrypted before they leave your device.
+                  </span>
+                </li>
+                <li class="announcement-item">
+                  <span>
+                    <strong>Anonymous tallying</strong><br />
+                    Identity and ballot data are stored separately.
+                  </span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+          <header class="section-header">
+            <div class="section-kicker">Stories</div>
+            <h2 class="section-title">What voters are saying</h2>
+            <p class="section-subtitle">
+              Built to feel as safe as a physical ballot box, with the convenience of a
+              modern web app.
+            </p>
+          </header>
+
+          <div class="testimonials-grid">
+            <article class="card-soft">
+              <p class="testimonial">
+                “I completed my ballot between classes on my phone in under two minutes.
+                The interface made it impossible to get lost.”
+              </p>
+              <div class="testimonial-footer">
+                <span><strong>Aisha K.</strong> · Voter</span>
+                <span class="tag">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  Mobile first
+                </span>
+              </div>
+            </article>
+            <article class="card-soft">
+              <p class="testimonial">
+                “Turnout increased by 28% after moving to SecureVote. Real‑time stats let
+                us nudge groups with low participation.”
+              </p>
+              <div class="testimonial-footer">
+                <span><strong>Prof. Malik</strong> · Admin</span>
+                <span class="tag">
+                  <i class="fa-solid fa-chart-line"></i>
+                  Higher turnout
+                </span>
+              </div>
+            </article>
+            <article class="card-soft">
+              <p class="testimonial">
+                “As a candidate, I can share my manifesto, host Q&amp;As, and know that
+                the final tally is fully auditable.”
+              </p>
+              <div class="testimonial-footer">
+                <span><strong>Riya S.</strong> · Candidate</span>
+                <span class="tag">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  Fair &amp; open
+                </span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <div class="nav-logo">
+                <i class="fa-solid fa-shield-check"></i>
+              </div>
+              <div class="nav-title-group">
+                <span class="nav-title">SecureVote</span>
+                <span class="nav-subtitle">Online Voting System</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 0.82rem">
+              A modern, secure and accessible way to run elections for universities,
+              organizations and communities of any size.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Quick links</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About the system</a></li>
+              <li><a href="candidates.html">View candidates</a></li>
+              <li><a href="vote.html">Cast your vote</a></li>
+              <li><a href="results.html">View results</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Contact</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fa-regular fa-envelope"></i>
+                support@securevote.demo
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                Election HQ, City Campus
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                +1 (555) 012‑3456
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SecureVote. All rights reserved. Demo interface for learning.</span>
+          <div class="social-row">
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4j5C2R4U6H0k8mxn5Q5rK4P6D6s9E7l3KqzUQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

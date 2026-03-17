@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightView School | Modern School Management System</title>
+    <meta
+      name="description"
+      content="BrightView School - modern, student-focused school with smart dashboards, online admission, results, attendance, and more."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <div class="nav-left">
+          <div class="nav-logo">BV</div>
+          <div class="nav-brand">
+            <span class="nav-brand-title">BrightView School</span>
+            <span class="nav-brand-subtitle">Inspiring Future Leaders</span>
+          </div>
+        </div>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="teachers.html">Teachers</a>
+          <a href="events.html">Events</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              <i class="fa-solid fa-gauge-high"></i>
+              Dashboards
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="dashboard-student.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <div>
+                  <span>Student Dashboard</span>
+                  <small>View timetable, attendance &amp; results</small>
+                </div>
+              </a>
+              <a href="dashboard-teacher.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div>
+                  <span>Teacher Dashboard</span>
+                  <small>Manage classes, students &amp; reports</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <button class="hamburger" type="button" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="nav-left">
+            <div class="nav-logo">BV</div>
+            <div class="nav-brand">
+              <span class="nav-brand-title">BrightView School</span>
+              <span class="nav-brand-subtitle">Smart School System</span>
+            </div>
+          </div>
+          <button
+            class="nav-icon-btn mobile-menu-close"
+            type="button"
+            aria-label="Close navigation"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-menu-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About School</a>
+          <a href="courses.html">Courses / Classes</a>
+          <a href="teachers.html">Teachers / Staff</a>
+          <a href="dashboard-student.html">Student Dashboard</a>
+          <a href="dashboard-teacher.html">Teacher Dashboard</a>
+          <a href="admission.html">Admission Form</a>
+          <a href="attendance.html">Attendance</a>
+          <a href="results.html">Results</a>
+          <a href="events.html">Events / News</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <div class="hero-badge-group">
+              <span class="badge">
+                <i class="fa-solid fa-star"></i>
+                CBSE Affiliated &bull; Since 2005
+              </span>
+              <span class="badge">
+                <i class="fa-solid fa-shield-heart"></i>
+                Safe, Smart &amp; Inclusive Campus
+              </span>
+            </div>
+            <h1 class="hero-title">
+              One Smart Platform for
+              <span>Students, Teachers &amp; Parents</span>
+            </h1>
+            <p class="hero-text">
+              BrightView School combines academic excellence with modern
+              technology. Track attendance, view results, manage classes and
+              communicate in real-time with our integrated school management
+              system.
+            </p>
+            <div class="hero-actions">
+              <a href="admission.html" class="btn">
+                Apply for Admission
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="dashboard-student.html" class="btn btn-outline">
+                Explore Student Dashboard
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <div class="hero-meta-icon">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                  <strong>1,200+</strong>
+                  <div class="text-muted">Active Students</div>
+                </div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="hero-meta-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <strong>98%</strong>
+                  <div class="text-muted">Board Success</div>
+                </div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="hero-meta-icon">
+                  <i class="fa-solid fa-face-smile-beam"></i>
+                </div>
+                <div>
+                  <strong>4.8/5</strong>
+                  <div class="text-muted">Parent Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right" aria-hidden="true">
+            <div class="hero-card-main">
+              <div class="hero-card-header">
+                <div class="hero-school">
+                  <div class="hero-school-logo">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div>
+                    <h4>BrightView Digital Campus</h4>
+                    <span>Today at a glance</span>
+                  </div>
+                </div>
+                <span class="hero-chip">
+                  <i class="fa-solid fa-circle-check"></i>
+                  Live
+                </span>
+              </div>
+              <div class="hero-metrics">
+                <div class="hero-metric">
+                  <span>Students present</span>
+                  <strong>1,142</strong>
+                  <small><i class="fa-solid fa-arrow-up"></i> +12 today</small>
+                </div>
+                <div class="hero-metric">
+                  <span>Average grade</span>
+                  <strong>A</strong>
+                  <small><i class="fa-solid fa-arrow-up"></i> +6% vs last term</small>
+                </div>
+                <div class="hero-metric">
+                  <span>Ongoing classes</span>
+                  <strong>32</strong>
+                  <small><i class="fa-solid fa-clock"></i> 3 labs</small>
+                </div>
+              </div>
+              <div class="hero-timetable">
+                <div class="hero-timetable-header">
+                  <div>
+                    <span>Today's Highlights</span>
+                    <strong>Timetable Preview</strong>
+                  </div>
+                  <span class="chip chip-primary">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    Full timetable in dashboard
+                  </span>
+                </div>
+                <div class="hero-timetable-list">
+                  <div class="hero-timetable-item">
+                    <span>08:30 &mdash; 09:20</span>
+                    <small>Mathematics (Grade 9)</small>
+                  </div>
+                  <div class="hero-timetable-item">
+                    <span>10:15 &mdash; 11:05</span>
+                    <small>Physics Lab (Grade 11)</small>
+                  </div>
+                  <div class="hero-timetable-item">
+                    <span>12:00 &mdash; 12:45</span>
+                    <small>Art &amp; Design (Grade 6)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-floating-card">
+              <div class="hero-floating-row">
+                <div class="hero-avatar-group">
+                  <div class="hero-avatar"></div>
+                  <div class="hero-avatar"></div>
+                  <div class="hero-avatar"></div>
+                </div>
+                <div>
+                  <small>Parent Portal</small>
+                  <strong>340+ online</strong>
+                </div>
+              </div>
+              <div class="hero-floating-row">
+                <span class="badge-status badge-success">
+                  <i class="fa-solid fa-circle"></i> Bus tracking active
+                </span>
+                <span class="badge-status badge-warning">
+                  <i class="fa-solid fa-bell"></i> 3 new notices
+                </span>
+              </div>
+            </div>
+
+            <div class="hero-badge-floating">
+              <i class="fa-solid fa-trophy"></i>
+              Top 10 city ranking
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview -->
+      <section class="section about-preview" id="about">
+        <div class="container about-grid">
+          <div>
+            <h2 class="section-title">A school that grows with your child</h2>
+            <p class="section-subtitle">
+              From kindergarten to grade 12, BrightView School provides a safe,
+              innovative, and engaging environment that nurtures curiosity,
+              creativity, and character.
+            </p>
+            <div class="about-qualities">
+              <div class="about-quality">
+                <div class="about-quality-icon">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div>
+                  <h4>Holistic learning</h4>
+                  <p>
+                    Balanced focus on academics, sports, arts, and life skills to
+                    develop well-rounded personalities.
+                  </p>
+                </div>
+              </div>
+              <div class="about-quality">
+                <div class="about-quality-icon">
+                  <i class="fa-solid fa-computer"></i>
+                </div>
+                <div>
+                  <h4>Smart classrooms</h4>
+                  <p>
+                    Tech-enabled labs and digital content designed for interactive
+                    and engaging classroom experiences.
+                  </p>
+                </div>
+              </div>
+              <div class="about-quality">
+                <div class="about-quality-icon">
+                  <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <div>
+                  <h4>Global exposure</h4>
+                  <p>
+                    Language labs, exchange programs, and global curriculum
+                    references prepare students for the world.
+                  </p>
+                </div>
+              </div>
+              <div class="about-quality">
+                <div class="about-quality-icon">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                  <h4>Safe &amp; caring</h4>
+                  <p>
+                    CCTV campus, trained counselors, and wellness programs ensure
+                    a safe and inclusive environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="about-metrics">
+              <div class="about-metrics-item">
+                <strong>18+</strong>
+                <span>Years of excellence</span>
+              </div>
+              <div class="about-metrics-item">
+                <strong>60+</strong>
+                <span>Experienced teachers</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <a href="about.html" class="btn btn-outline">
+                Learn more about our school
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="card about-card">
+              <div class="about-card-header">
+                <span>Academic snapshot</span>
+                <span class="chip chip-primary">
+                  <i class="fa-solid fa-chart-line"></i>
+                  Performance overview
+                </span>
+              </div>
+              <div class="about-card-grid">
+                <div class="about-card-pill">
+                  <span>Science stream</span>
+                  <small>Avg. 93% in board exams</small>
+                </div>
+                <div class="about-card-pill">
+                  <span>Commerce stream</span>
+                  <small>90%+ for 3 consecutive years</small>
+                </div>
+                <div class="about-card-pill">
+                  <span>Olympiad achievers</span>
+                  <small>45+ state &amp; national ranks</small>
+                </div>
+                <div class="about-card-pill">
+                  <span>Co-curricular</span>
+                  <small>20+ clubs &amp; societies</small>
+                </div>
+              </div>
+              <div class="about-card-tag">
+                <i class="fa-solid fa-medal"></i>
+                100% pass rate last 5 years
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Courses -->
+      <section class="section" id="courses">
+        <div class="container">
+          <h2 class="section-title">Featured Courses &amp; Classes</h2>
+          <p class="section-subtitle">
+            Wide range of subjects, skill-building courses, and integrated
+            programs curated for every stage of schooling.
+          </p>
+          <div class="courses-grid">
+            <article class="card card-hover course-card">
+              <div class="course-icon">
+                <i class="fa-solid fa-atom"></i>
+              </div>
+              <h3 class="course-title">Integrated Science Program</h3>
+              <p class="text-muted">
+                Concept-based learning in Physics, Chemistry, and Biology with
+                lab exposure from Grade 8 onwards.
+              </p>
+              <div class="course-meta">
+                <span><i class="fa-regular fa-clock"></i> 6 periods / week</span>
+                <span class="course-level">Middle &amp; High School</span>
+              </div>
+            </article>
+            <article class="card card-hover course-card">
+              <div class="course-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 class="course-title">Coding &amp; Robotics Lab</h3>
+              <p class="text-muted">
+                Hands-on coding, robotics, and AI modules that prepare students
+                for the digital future.
+              </p>
+              <div class="course-meta">
+                <span><i class="fa-regular fa-clock"></i> 4 periods / week</span>
+                <span class="course-level">Grade 6 &amp; above</span>
+              </div>
+            </article>
+            <article class="card card-hover course-card">
+              <div class="course-icon">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h3 class="course-title">Visual &amp; Performing Arts</h3>
+              <p class="text-muted">
+                Art, music, dance, and theatre programs that bring out each
+                child&apos;s creativity and expression.
+              </p>
+              <div class="course-meta">
+                <span><i class="fa-regular fa-clock"></i> 3 periods / week</span>
+                <span class="course-level">All grades</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teachers Preview -->
+      <section class="section" id="teachers">
+        <div class="container">
+          <h2 class="section-title">Meet our lead educators</h2>
+          <p class="section-subtitle">
+            Experienced, compassionate, and deeply invested in every student&apos;s
+            success inside and outside the classroom.
+          </p>
+          <div class="teachers-grid">
+            <article class="card card-hover teacher-card">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <h3 class="teacher-name">Dr. Ananya Verma</h3>
+              <p class="teacher-role">Principal</p>
+              <p class="teacher-meta">20+ years in school leadership</p>
+              <div class="teacher-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </article>
+            <article class="card card-hover teacher-card">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <h3 class="teacher-name">Rahul Mehta</h3>
+              <p class="teacher-role">HOD &mdash; Mathematics</p>
+              <p class="teacher-meta">Author &amp; national Olympiad mentor</p>
+              <div class="teacher-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </article>
+            <article class="card card-hover teacher-card">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-flask"></i>
+              </div>
+              <h3 class="teacher-name">Sana Ali</h3>
+              <p class="teacher-role">Senior Science Faculty</p>
+              <p class="teacher-meta">STEM educator &amp; lab in-charge</p>
+              <div class="teacher-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </article>
+            <article class="card card-hover teacher-card">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-music"></i>
+              </div>
+              <h3 class="teacher-name">Vikram Rao</h3>
+              <p class="teacher-role">Arts &amp; Culture Mentor</p>
+              <p class="teacher-meta">Choir, drama &amp; cultural clubs</p>
+              <div class="teacher-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="text-center mt-3">
+            <a href="teachers.html" class="btn btn-outline">
+              View all teachers &amp; staff
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section stats" id="statistics">
+        <div class="container">
+          <div class="grid stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-users-rectangle"></i>
+              </div>
+              <div class="stat-value">1.2k+</div>
+              <div class="stat-label">Enrolled students</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div class="stat-value">65+</div>
+              <div class="stat-label">Qualified teachers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <div class="stat-value">150+</div>
+              <div class="stat-label">Awards &amp; recognitions</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-bus-school"></i>
+              </div>
+              <div class="stat-value">18</div>
+              <div class="stat-label">GPS-enabled buses</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events / News Preview -->
+      <section class="section" id="events">
+        <div class="container">
+          <h2 class="section-title">Latest news &amp; events</h2>
+          <p class="section-subtitle">
+            Stay updated with upcoming competitions, celebrations, parent
+            meetings, and important notifications from school.
+          </p>
+          <div class="events-grid">
+            <article class="card card-hover">
+              <div class="event-card-date">
+                <strong>12</strong>
+                <span>Apr</span>
+              </div>
+              <h3>Annual Science &amp; Innovation Fair 2026</h3>
+              <p class="text-muted">
+                Students from Grades 6–12 showcase working models and research
+                projects judged by industry experts.
+              </p>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-clock"></i> 9:30 AM onwards</span>
+                <span class="event-tag">Competitions</span>
+              </div>
+            </article>
+            <article class="card card-hover">
+              <div class="event-card-date">
+                <strong>20</strong>
+                <span>May</span>
+              </div>
+              <h3>Parent Orientation &amp; PTA Meet</h3>
+              <p class="text-muted">
+                Academic roadmap, assessments, and co-curricular plans for the
+                new session followed by Q&amp;A.
+              </p>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-clock"></i> 10:00 AM</span>
+                <span class="event-tag">Parent Connect</span>
+              </div>
+            </article>
+            <article class="card card-hover">
+              <div class="event-card-date">
+                <strong>02</strong>
+                <span>Jun</span>
+              </div>
+              <h3>Inter-School Sports Championship</h3>
+              <p class="text-muted">
+                Athletics, football, basketball, and more. Trials begin next
+                week for interested students.
+              </p>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-clock"></i> Full day</span>
+                <span class="event-tag">Sports</span>
+              </div>
+            </article>
+          </div>
+          <div class="text-center mt-3">
+            <a href="events.html" class="btn btn-outline">
+              View full events calendar
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials / Slider -->
+      <section class="section testimonials" id="testimonials">
+        <div class="container">
+          <div class="testimonials-header">
+            <h3>What our community says</h3>
+            <p>
+              Parents, students, and alumni share their experiences with
+              BrightView School.
+            </p>
+          </div>
+          <div class="testimonial-slider">
+            <div class="testimonial-track">
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  &ldquo;The student dashboard helps my son stay organised with
+                  his classes, homework, and exams. As a parent, I can track
+                  attendance and performance in real time. It&apos;s the
+                  perfect blend of academics and technology.&rdquo;
+                </p>
+                <div class="testimonial-user">
+                  <div class="testimonial-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div>
+                    <h4>Neha Sharma</h4>
+                    <span>Parent of Grade 9 student</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  &ldquo;BrightView doesn&apos;t just focus on marks. The clubs,
+                  competitions, and leadership opportunities have helped me
+                  discover my strengths and build confidence for the future.&rdquo;
+                </p>
+                <div class="testimonial-user">
+                  <div class="testimonial-avatar">
+                    <i class="fa-solid fa-user-graduate"></i>
+                  </div>
+                  <div>
+                    <h4>Arjun Patel</h4>
+                    <span>Grade 12, Science stream</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  &ldquo;As a teacher, the digital tools make lesson planning,
+                  attendance, and assessments far more efficient. It frees up
+                  time to focus on what matters most &mdash; teaching.&rdquo;
+                </p>
+                <div class="testimonial-user">
+                  <div class="testimonial-avatar">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </div>
+                  <div>
+                    <h4>Suhani Rao</h4>
+                    <span>Senior English Faculty</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="testimonial-controls">
+              <span class="testimonial-dot active"></span>
+              <span class="testimonial-dot"></span>
+              <span class="testimonial-dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Preview -->
+      <section class="section" id="contact-preview">
+        <div class="container contact-preview-grid">
+          <div>
+            <h2 class="section-title">Visit or get in touch</h2>
+            <p class="section-subtitle">
+              Have questions about admissions, transport, or curriculum? Our
+              team is happy to help.
+            </p>
+            <ul class="contact-info-list">
+              <li class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4>Campus address</h4>
+                  <p>
+                    BrightView School, Sunrise Avenue,<br />
+                    Sector 12, Greenfield City
+                  </p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4>Call us</h4>
+                  <p>+91-98765-43210 &bull; +91-98765-67890</p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@brightviewschool.edu &bull; admissions@brightview.edu</p>
+                </div>
+              </li>
+            </ul>
+            <div class="mt-3">
+              <a href="contact.html" class="btn btn-outline">
+                Go to detailed contact page
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <h3 class="mb-2">Quick enquiry</h3>
+              <p class="text-muted mb-3">
+                Share your details and we&apos;ll get back within one working
+                day.
+              </p>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="quickName">Full name</label>
+                  <input
+                    type="text"
+                    id="quickName"
+                    name="name"
+                    class="form-control"
+                    placeholder="Parent / Guardian name"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="quickEmail">Email</label>
+                  <input
+                    type="email"
+                    id="quickEmail"
+                    name="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="quickSubject">Subject</label>
+                  <input
+                    type="text"
+                    id="quickSubject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="Admission enquiry / Transport / Others"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="quickMessage">Message</label>
+                  <textarea
+                    id="quickMessage"
+                    name="message"
+                    rows="3"
+                    class="form-control"
+                    placeholder="Share your question or requirement"
+                    required
+                  ></textarea>
+                  <span class="form-error"></span>
+                </div>
+                <div class="mt-3">
+                  <button type="submit" class="btn">
+                    Submit enquiry
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                  <p class="form-note mt-2">
+                    This is a demo form for UI validation only.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div>
+                <h4>BrightView School</h4>
+                <p>Smart School Management System</p>
+              </div>
+            </div>
+            <p>
+              Empowering students with knowledge, skills, and values to succeed
+              in a rapidly changing world.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="about.html">About School</a>
+              <a href="courses.html">Courses &amp; Curriculum</a>
+              <a href="admission.html">Admission Process</a>
+              <a href="events.html">News &amp; Events</a>
+              <a href="gallery.html">Campus Gallery</a>
+            </div>
+          </div>
+          <div>
+            <h4>Dashboards</h4>
+            <div class="footer-links">
+              <a href="dashboard-student.html">Student Dashboard</a>
+              <a href="dashboard-teacher.html">Teacher Dashboard</a>
+              <a href="attendance.html">Attendance</a>
+              <a href="results.html">Results</a>
+            </div>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer-contact">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                Sector 12, Greenfield City
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                +91-98765-43210
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@brightviewschool.edu
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="yearSpan"></span> BrightView School. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Set footer year without relying on jQuery
+      document.getElementById('yearSpan').textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
+

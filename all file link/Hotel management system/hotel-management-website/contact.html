@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Azure Crest Hotel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><i class="fa-solid fa-hotel"></i> Azure Crest</a>
+      <nav>
+        <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="booking.html">Booking</a>
+          <a class="active" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Get in Touch</h1>
+      <p class="section-subtitle">Questions or special requests? We’re here to help.</p>
+      <div class="grid grid-2">
+        <div class="form">
+          <div class="form-group">
+            <label for="cName">Name</label>
+            <input id="cName" type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" type="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" rows="5" placeholder="How can we assist?"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn" id="contactSubmit" type="button">Send Message</button>
+          </div>
+          <div id="contactMsg" class="success" style="margin-top:8px;"></div>
+        </div>
+        <div>
+          <div class="card" style="overflow:hidden;border-radius:14px;">
+            <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.826375208084!2d144.95373531531764!3d-37.8162791797515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE0LjQiRQ!5e0!3m2!1sen!2sus!4v1616456320000!5m2!1sen!2sus" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="card card-body" style="margin-top:12px;">
+            <p><i class="fa fa-location-dot"></i> 123 Azure Blvd, Downtown</p>
+            <p><i class="fa fa-phone"></i> +1 (555) 010-2233</p>
+            <p><i class="fa fa-envelope"></i> stay@azurecrest.com</p>
+            <div class="social" style="margin-top:8px;">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <a class="logo" href="index.html"><i class="fa-solid fa-hotel"></i> Azure Crest</a>
+        <p>Modern and elegant hospitality in the city’s cultural heart.</p>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="about.html">About</a></p>
+        <p><a href="rooms.html">Rooms</a></p>
+        <p><a href="services.html">Services</a></p>
+      </div>
+      <div>
+        <h3>Guest Services</h3>
+        <p><a href="booking.html">Booking</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="index.html#features">Amenities</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>123 Azure Blvd, Downtown</p>
+        <p>+1 (555) 010-2233</p>
+        <p>stay@azurecrest.com</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Azure Crest Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="jquery/jquery.min.js"><\\/script>')</script>
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    $('#contactSubmit').on('click', function () {
+      var name = $('#cName').val().trim();
+      var email = $('#cEmail').val().trim();
+      var msg = $('#cMessage').val().trim();
+      if (!name || !email || !msg) {
+        $('#contactMsg').removeClass('success').text('Please complete all fields.');
+        return;
+      }
+      $('#contactMsg').addClass('success').text('Thank you. We will reach out shortly.');
+      $('#cName,#cEmail,#cMessage').val('');
+    });
+  </script>
+</body>
+</html>

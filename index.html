@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miftah Khoja — Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo">MK.</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <!-- <li><a href="#services">Services</a></li> -->
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollTo('#contact')">Hire Me</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <!-- <a href="#services" onclick="toggleMenu()">Services</a> -->
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">Available for Freelance</div>
+      <h1 class="hero-heading">
+        Creative<br>
+        <span class="line2">Front-end Developer</span>
+      </h1>
+      <p class="hero-sub">
+        I craft beautiful, high-performance websites and web applications that turn ideas into digital realities. Clean code. Stunning design. Seamless experience.
+      </p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn-outline">Hire Me →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="floating-badge fb-top">
+        <div class="fb-dot"></div>
+        <span>add sothing about Your</span>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-glow"></div>
+        <div class="avatar-placeholder">
+          <div class="avatar-icon">
+            <img href="all file link/tops photo.jpg">
+          </div>
+          <div class="avatar-name">Miftah Khoja</div>
+          <div class="avatar-role">Front-end Developer</div>
+        </div>
+        <div class="hero-chips">
+          <span class="chip">React</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          
+          <!-- <span class="chip">Full Stack</span> -->
+        </div>
+      </div>
+      <div class="floating-badge fb-bottom">
+        <div class="fb-dot amber"></div>
+        <span>add more details</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<!-- <section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="50">0</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="35">0</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="5">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="99">0</div>
+      <div class="stat-label">Client Satisfaction %</div>
+    </div>
+  </div>
+</section> -->
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-inner">
+    <div class="skills-header reveal">
+      <div class="section-tag">What I Know</div>
+      <h2 class="section-title">Skills & <span>Technologies</span></h2>
+      <p class="section-desc" style="margin:0 auto;">From front-end aesthetics to back-end architecture — I build complete web solutions with modern stacks.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚛️</div>
+        <div class="skill-name">React & Next.js</div>
+        <div class="skill-desc">Building dynamic, performant UIs and full-stack apps with React ecosystem.</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+    
+      
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔧</div>
+        <div class="skill-name">HTML/CSS </div>
+        <div class="skill-desc">RESTful APIs, server-side logic, and backend architecture for scalable apps.</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">Databases</div>
+        <div class="skill-desc">MongoDB, PostgreSQL, MySQL — structured and unstructured data management.</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📱</div>
+        <div class="skill-name">Responsive Design</div>
+        <div class="skill-desc">Pixel-perfect layouts across all devices with CSS Grid, Flexbox & Tailwind.</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">Deployment & DevOps</div>
+        <div class="skill-desc">AWS, Vercel, Docker, CI/CD pipelines for production-ready deployments.</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-inner">
+    <div class="portfolio-header reveal">
+      <div class="section-tag">My Work</div>
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <p class="section-desc" style="margin:0 auto;">A selection of projects that showcase my craft in building modern, high-quality web experiences.</p>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterPortfolio('all', this)">All</button>
+      <button class="filter-tab" onclick="filterPortfolio('web-app', this)">Web Apps</button>
+      <button class="filter-tab" onclick="filterPortfolio('landing', this)">Landing Pages</button>
+      <button class="filter-tab" onclick="filterPortfolio('ecommerce', this)">E-Commerce</button>
+      <button class="filter-tab" onclick="filterPortfolio('dashboard', this)">Dashboards</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-item reveal" data-cat="web-app" onclick="openModal('SaaS Platform','Web App','A subscription-based project management SaaS with real-time collaboration, role management, and analytics dashboard built with React + Node.js.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(6,182,212,0.1));">🚀</div>
+        <div class="portfolio-tag">Web App</div>
+        <div class="portfolio-overlay">
+          <h4> Doctor-appointment-System</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="all file link/doctor-appointment-website/index.html">Link</a></div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="ecommerce" onclick="openModal('E-Commerce Store','E-Commerce','Full-featured online store with cart, payments via Stripe, inventory management and admin dashboard. Built with Next.js and MongoDB.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(99,102,241,0.1));">🛒</div>
+        <div class="portfolio-tag">E-Commerce</div>
+        <div class="portfolio-overlay">
+          <h4>E-CommerceStore</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="/all file link/files (3)/index.html">Link</a></div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="dashboard" onclick="openModal('Analytics Dashboard','Dashboard','Real-time analytics dashboard with interactive charts, KPI tracking and team collaboration tools. Built with React + D3.js.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(99,102,241,0.08));">📊</div>
+        <div class="portfolio-tag">Dashboard</div>
+        <div class="portfolio-overlay">
+          <h4>Analytics Dashboard</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="all file link/online voting system/index.html">Link</a></div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="landing" onclick="openModal('Product Landing Page','Landing Page','High-converting product launch page with scroll animations, video hero, and A/B-tested CTA sections. Built with Next.js.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(245,158,11,0.12),rgba(6,182,212,0.12));">🎯</div>
+        <div class="portfolio-tag">Landing Page</div>
+        <div class="portfolio-overlay">
+          <h4>Product Landing Page</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="all file link/women salon management system/women-salon-website/index.html">Link</a></div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="web-app" onclick="openModal('Social Media App','Web App','A social platform with posts, follows, real-time notifications, and media uploads. Built with React Native + Node.js REST API.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(245,158,11,0.08));">💬</div>
+        <div class="portfolio-tag">Web App</div>
+        <div class="portfolio-overlay">
+          <h4>Social Media App</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="all file link/event management system/event-management-website/index.html">Link</a></div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="dashboard" onclick="openModal('CRM System','Dashboard','Customer relationship management system with pipeline tracking, email integration, and performance reporting for sales teams.')">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(6,182,212,0.15),rgba(245,158,11,0.1));">🏢</div>
+        <div class="portfolio-tag">Dashboard</div>
+        <div class="portfolio-overlay">
+          <h4>School-Managemnet-system</h4>
+          <span>HTML · CSS · JavaScript · jQuery</span>
+          <div><a href="all file link/school management system/index.html">link</a></div>
+          <!-- <div><a href="/all file link/files (3)/index.html">Link</a></div> -->
+          
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<!-- <section id="services">
+  <div class="services-inner">
+    <div class="services-header reveal">
+      <div class="section-tag">What I Offer</div>
+      <h2 class="section-title">My <span>Services</span></h2>
+      <p class="section-desc" style="margin:0 auto;">Premium web development services tailored to help your business grow digitally.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">🌐</div>
+        <div class="service-name">Website Development</div>
+        <div class="service-desc">Full-stack responsive websites built with modern tech stacks, optimized for speed and SEO.</div>
+        <div class="service-price">Starting at $499</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">⚛️</div>
+        <div class="service-name">Web App Development</div>
+        <div class="service-desc">Custom SaaS platforms, dashboards, and interactive apps with React and Node.js.</div>
+        <div class="service-price">Starting at $999</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">🎨</div>
+        <div class="service-name">UI/UX Design</div>
+        <div class="service-desc">User-centered design in Figma — wireframes, prototypes, and pixel-perfect UI systems.</div>
+        <div class="service-price">Starting at $299</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">🛒</div>
+        <div class="service-name">E-Commerce Solutions</div>
+        <div class="service-desc">Online stores with cart, Stripe/Razorpay integration, inventory, and admin panels.</div>
+        <div class="service-price">Starting at $799</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">🔧</div>
+        <div class="service-name">API Development</div>
+        <div class="service-desc">RESTful and GraphQL APIs with authentication, rate limiting and documentation.</div>
+        <div class="service-price">Starting at $399</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-glow"></div>
+        <div class="service-icon-wrap">☁️</div>
+        <div class="service-name">Maintenance & Support</div>
+        <div class="service-desc">Ongoing support, updates, performance monitoring, and bug fixes for your web projects.</div>
+        <div class="service-price">Starting at $99/mo</div>
+        <a href="#contact" class="service-btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-photo reveal">
+      <div class="about-photo-icon"><img src="all file link/WhatsApp Image 2026-03-16 at 3.23.59 PM.jpeg"  width="100%"></div>
+      <div class="about-photo-name">Miftah Khoja</div>
+      <div class="about-photo-tag">Front-end developer</div>
+    </div>
+    <div class="about-content reveal">
+      <div>
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Building the Web,<br><span>One Line at a Time</span></h2>
+      </div>
+      <p class="section-desc">
+        I'm Miftah Khoja, a passionate full-stack web developer with 5+ years of experience crafting high-performance digital products. I specialise in turning complex problems into elegant, user-friendly web solutions.
+      </p>
+      <p class="section-desc">
+        My mission is simple: build websites and applications that not only look stunning but also deliver real results for clients. I blend technical precision with creative design thinking.
+      </p>
+      <div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.6rem;font-weight:500;">TOOLS & TECH</div>
+        <div class="about-tools">
+          <span class="tool-badge">React</span>
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">CSS</span>
+          <span class="tool-badge">JavaScript</span>
+          <span class="tool-badge">JQuery</span>
+          <span class="tool-badge">Tailwind</span>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+        
+         
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-year">2025 – 2026</div>
+            <div class="timeline-role">Frontend Developer</div>
+            <div class="timeline-place">Tops Technologies, Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!-- <section id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-header reveal">
+      <div class="section-tag">Client Feedback</div>
+      <h2 class="section-title">What Clients <span>Say</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Miftah delivered our e-commerce platform ahead of schedule with exceptional quality. The site is fast, beautiful, and our conversion rate increased by 40%."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RK</div>
+          <div>
+            <div class="testi-name">Rahul Kapoor</div>
+            <div class="testi-role">CEO, ShopEase India</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The SaaS dashboard Miftah built for us is clean, intuitive and exactly what our team needed. He communicated brilliantly throughout the entire project."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SM</div>
+          <div>
+            <div class="testi-name">Sara Mitchell</div>
+            <div class="testi-role">Product Manager, Flowly SaaS</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Outstanding work on our company website. Miftah has a rare ability to combine technical skill with great design sensibility. Highly recommended!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AP</div>
+          <div>
+            <div class="testi-name">Arjun Patel</div>
+            <div class="testi-role">Founder, Novature Tech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div>
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Build Something <span>Amazing</span></h2>
+        <p class="section-desc">Have a project in mind? I'd love to hear about it. Send me a message and let's create something great together.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="contact-detail">
+          <div class="contact-icon">📧</div>
+          <div class="contact-detail-text">
+            <span>Email</span>
+            <a href="mailto:miftah@example.com">miftahkhoja90@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📱</div>
+          <div class="contact-detail-text">
+            <span>Phone</span>
+            <a href="tel:+919876543210">+91 6352XXXX57 </a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail-text">
+            <span>Location</span>
+            <a>Ahmedabad, Gujarat, India</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem;font-weight:500;">FIND ME ON</div>
+        <div class="socials">
+          <a href="#" class="social-btn" title="GitHub">🐙</a>
+          <a href="#" class="social-btn" title="LinkedIn">💼</a>
+          <a href="#" class="social-btn" title="Twitter">🐦</a>
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="Behance">🎨</a>
+        </div>
+      </div>
+      <div class="maps-placeholder">📍 Ahmedabad, Gujarat, India</div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="Project Inquiry">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;padding:1rem;font-size:1rem;" onclick="handleSubmit()">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<!-- <section id="cta">
+  <div class="cta-inner reveal">
+    <div class="section-tag">Ready to Start?</div>
+    <h2>Let's Turn Your Vision Into Reality</h2>
+    <p>Whether it's a new project or improving an existing one, I'm here to help build something exceptional.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#contact" class="btn-primary">Start a Project</a>
+      <a href="#portfolio" class="btn-outline">See My Work</a>
+    </div>
+  </div>
+</section> -->
+
+<!-- FOOTER -->
+<!-- <footer>
+  <div class="footer-inner">
+    <div class="logo">MK.</div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="#">🐙</a>
+      <a href="#">💼</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+    <div class="footer-copy">© 2025 Miftah Khoja. All rights reserved.</div>
+  </div>
+</footer> -->
+
+<!-- MODAL -->
+<div id="modal" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-cat" id="modalCat"></div>
+    <div class="modal-desc" id="modalDesc"></div>
+    <div style="margin-top:1.5rem;display:flex;gap:0.75rem;">
+      <a href="#contact" class="btn-primary" style="font-size:0.85rem;padding:0.65rem 1.4rem;">Work With Me</a>
+      <button class="btn-outline" style="font-size:0.85rem;padding:0.65rem 1.4rem;" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* Cursor */
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.transform=`translate(${mx-5}px,${my-5}px)`; });
+  function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;requestAnimationFrame(animRing);}
+  animRing();
+  document.querySelectorAll('a,button,.portfolio-item,.skill-card,.service-card,.filter-tab').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cursor.style.transform+=` scale(2)`;ring.style.opacity='0.3';});
+    el.addEventListener('mouseleave',()=>{ring.style.opacity='0.6';});
+  });
+
+  /* Navbar scroll */
+  window.addEventListener('scroll',()=>{
+    document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+  });
+
+  /* Mobile menu */
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+  /* Scroll reveal */
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+  },{threshold:0.12});
+  reveals.forEach(r=>obs.observe(r));
+
+  /* Skill bars */
+  const barObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.skill-fill').forEach(fill=>{
+          fill.style.width = fill.dataset.width + '%';
+        });
+      }
+    });
+  },{threshold:0.2});
+  document.querySelectorAll('.skill-card').forEach(c=>barObs.observe(c));
+
+  /* Stats counter */
+  function countUp(el, target){
+    let current=0;
+    const step = Math.ceil(target/60);
+    const interval = setInterval(()=>{
+      current = Math.min(current+step, target);
+      el.textContent = current + (el.dataset.target==='99'?'':'+'||'');
+      if(current>=target)clearInterval(interval);
+    },24);
+  }
+  const statObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.stat-num').forEach(num=>{
+          countUp(num, parseInt(num.dataset.target));
+        });
+        statObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  statObs.observe(document.getElementById('stats'));
+
+  /* Portfolio filter */
+  function filterPortfolio(cat, btn){
+    document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.portfolio-item').forEach(item=>{
+      if(cat==='all'||item.dataset.cat===cat){
+        item.style.display=''; item.style.opacity='1'; item.style.transform='';
+      } else {
+        item.style.opacity='0'; item.style.transform='scale(0.9)';
+        setTimeout(()=>{ item.style.display='none'; },300);
+      }
+    });
+  }
+
+  /* Modal */
+  const icons = {'Web App':'🚀','E-Commerce':'🛒','Dashboard':'📊','Landing Page':'🎯'};
+  function openModal(title,cat,desc){
+    document.getElementById('modalIcon').textContent = icons[cat]||'💻';
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalCat').textContent = cat;
+    document.getElementById('modalDesc').textContent = desc;
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){ document.getElementById('modal').classList.remove('open'); document.body.style.overflow=''; }
+  function closeModalOutside(e){ if(e.target===document.getElementById('modal'))closeModal(); }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeModal(); });
+
+  /* Form submit */
+  function handleSubmit(){
+    const btn = event.target;
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = 'linear-gradient(135deg,#10b981,#06b6d4)';
+    setTimeout(()=>{btn.textContent='Send Message →';btn.style.background='';},3000);
+  }
+
+  function scrollTo(sel){ document.querySelector(sel).scrollIntoView({behavior:'smooth'}); }
+</script>
+</body>
+</html>

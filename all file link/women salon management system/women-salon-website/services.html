@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace Salon | Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container flex space-between align-center">
+                <div class="top-info">
+                    <span><i class="far fa-clock"></i> Mon - Sun: 9:00 AM - 8:00 PM</span>
+                    <span><i class="fas fa-phone-alt"></i> +91 98765 43210</span>
+                </div>
+                <div class="top-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-wrapper">
+            <div class="container">
+                <nav class="navbar flex space-between align-center">
+                    <a href="index.html" class="logo">
+                        <span class="logo-main">Glow &amp; Grace</span>
+                        <span class="logo-sub">Women Salon</span>
+                    </a>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero services-hero">
+        <div class="container">
+            <h1>Our Salon Services</h1>
+            <p>From head to toe – everything your beauty routine needs.</p>
+        </div>
+    </section>
+
+    <!-- Services Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Service Categories</h2>
+                <p>Use filters to quickly find the services that interest you.</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hair">Hair</button>
+                <button class="filter-btn" data-filter="skin">Facial &amp; Skincare</button>
+                <button class="filter-btn" data-filter="makeup">Makeup &amp; Bridal</button>
+                <button class="filter-btn" data-filter="nails">Nails</button>
+                <button class="filter-btn" data-filter="spa">Spa &amp; Massage</button>
+                <button class="filter-btn" data-filter="waxing">Waxing</button>
+            </div>
+
+            <div class="services-grid full">
+                <!-- Haircut & Styling -->
+                <article class="service-card" data-category="hair">
+                    <img src="images/hair cut img.webp" alt="Haircut & Hair Styling">
+                    <div class="service-content">
+                        <h3>Haircut &amp; Hair Styling</h3>
+                        <p>Trendy cuts, blow-dries, curls, and styling for all hair types.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹799</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 45 - 60 mins</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="service-card" data-category="hair">
+                    <img src="images/hair coloring img.png" alt="Hair Coloring">
+                    <div class="service-content">
+                        <h3>Hair Coloring</h3>
+                        <p>Global color, highlights, balayage, and fashion shades with protection.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹2499</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 - 3 hrs</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Facial & Skincare -->
+                <article class="service-card" data-category="skin">
+                    <img src="images/facial img.jpg" alt="Facial & Skincare">
+                    <div class="service-content">
+                        <h3>Facial &amp; Skincare</h3>
+                        <p>Brightening, anti-tan, anti-acne, and anti-aging facials using premium products.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹1199</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 60 - 90 mins</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="service-card" data-category="skin">
+                    <img src="images/detox cleanup.jpg" alt="Detox Cleanup">
+                    <div class="service-content">
+                        <h3>Detox Cleanup</h3>
+                        <p>Deep pore cleansing for dull, congested, or pollution-exposed skin.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹899</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 45 mins</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Makeup & Bridal -->
+                <article class="service-card" data-category="makeup">
+                    <img src="images/occasion makeup.webp" alt="Occasion Makeup">
+                    <div class="service-content">
+                        <h3>Occasion Makeup</h3>
+                        <p>Party, cocktail, and reception makeup tailored to your outfit and features.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹2499</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 60 - 90 mins</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="service-card" data-category="makeup">
+                    <img src="images/bidal makeup2.png"Bridal Makeup">
+                    <div class="service-content">
+                        <h3>Bridal Makeup</h3>
+                        <p>Complete bridal package with HD/airbrush makeup, hairstyling, and draping.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹14999</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 3 - 4 hrs</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Nails -->
+                <article class="service-card" data-category="nails">
+                    <img src="images/Mani padicur.jpg" alt="Manicure & Pedicure">
+                    <div class="service-content">
+                        <h3>Manicure &amp; Pedicure</h3>
+                        <p>Classic, spa, and deluxe hand &amp; foot rituals with scrubs and masks.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹699</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 45 - 75 mins</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Spa & Massage -->
+                <article class="service-card" data-category="spa">
+                    <img src="images/massage spa.avif" alt="Spa & Massage">
+                    <div class="service-content">
+                        <h3>Spa &amp; Massage</h3>
+                        <p>Aromatherapy, deep tissue, head, neck &amp; shoulder massages for relaxation.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹1599</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 60 - 90 mins</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Waxing -->
+                <article class="service-card" data-category="waxing">
+                    <img src="images/waxing img.webp" alt="Waxing">
+                    <div class="service-content">
+                        <h3>Waxing</h3>
+                        <p>Chocolate, Rica, and regular waxing options for all body areas.</p>
+                        <div class="service-meta">
+                            <span class="service-price">From ₹399</span>
+                            <span class="service-duration"><i class="far fa-clock"></i> 30 - 60 mins</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+        <div class="container cta-content">
+            <div class="cta-text">
+                <h2>Book Your Favorite Services Online</h2>
+                <p>Select your preferred service, expert, and timing – we’ll take care of the rest.</p>
+            </div>
+            <a href="appointment.html" class="btn btn-primary btn-lg">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h3>Glow &amp; Grace Salon</h3>
+                <p>Premium women-only salon offering a complete range of hair, beauty, and spa services in a luxurious environment.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rose Avenue, Pink City, India</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="far fa-envelope"></i> hello@glowandgracesalon.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Opening Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 8:00 PM</p>
+                <p>Sat - Sun: 10:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex space-between align-center">
+                <p>&copy; <span id="currentYear"></span> Glow &amp; Grace Women Salon. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for modern women.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

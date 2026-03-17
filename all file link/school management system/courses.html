@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses &amp; Classes | BrightView School</title>
+    <meta
+      name="description"
+      content="Explore BrightView School courses, class structure, and weekly schedules for primary, middle, and senior school."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <div class="nav-left">
+          <div class="nav-logo">BV</div>
+          <div class="nav-brand">
+            <span class="nav-brand-title">BrightView School</span>
+            <span class="nav-brand-subtitle">Inspiring Future Leaders</span>
+          </div>
+        </div>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html" class="active">Courses</a>
+          <a href="teachers.html">Teachers</a>
+          <a href="events.html">Events</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              <i class="fa-solid fa-gauge-high"></i>
+              Dashboards
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="dashboard-student.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <div>
+                  <span>Student Dashboard</span>
+                  <small>View timetable, attendance &amp; results</small>
+                </div>
+              </a>
+              <a href="dashboard-teacher.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div>
+                  <span>Teacher Dashboard</span>
+                  <small>Manage classes, students &amp; reports</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <button class="hamburger" type="button" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="nav-left">
+            <div class="nav-logo">BV</div>
+            <div class="nav-brand">
+              <span class="nav-brand-title">BrightView School</span>
+              <span class="nav-brand-subtitle">Smart School System</span>
+            </div>
+          </div>
+          <button
+            class="nav-icon-btn mobile-menu-close"
+            type="button"
+            aria-label="Close navigation"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-menu-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About School</a>
+          <a href="courses.html">Courses / Classes</a>
+          <a href="teachers.html">Teachers / Staff</a>
+          <a href="dashboard-student.html">Student Dashboard</a>
+          <a href="dashboard-teacher.html">Teacher Dashboard</a>
+          <a href="admission.html">Admission Form</a>
+          <a href="attendance.html">Attendance</a>
+          <a href="results.html">Results</a>
+          <a href="events.html">Events / News</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="page-header">
+            <h1>Courses &amp; Class Structure</h1>
+            <p>
+              From foundational skills to advanced streams, our curriculum is
+              designed to support every learner.
+            </p>
+          </div>
+
+          <h2 class="section-title">School sections</h2>
+          <p class="section-subtitle">
+            Each section is carefully structured to meet the developmental needs
+            of its learners.
+          </p>
+
+          <div class="grid-3 mb-4">
+            <article class="card card-hover">
+              <span class="tag mb-2">Pre-primary &amp; Primary (KG &mdash; Grade 5)</span>
+              <p class="text-muted">
+                Focus on foundational literacy, numeracy, motor skills, and
+                socio-emotional learning through play-based and activity-based
+                methods.
+              </p>
+            </article>
+            <article class="card card-hover">
+              <span class="tag mb-2">Middle School (Grades 6 &mdash; 8)</span>
+              <p class="text-muted">
+                Strong conceptual understanding across Science, Mathematics,
+                Social Sciences, and languages with exposure to coding and
+                robotics.
+              </p>
+            </article>
+            <article class="card card-hover">
+              <span class="tag mb-2">Senior School (Grades 9 &mdash; 12)</span>
+              <p class="text-muted">
+                Stream-based learning (Science, Commerce, Humanities) with
+                career counseling, board exam preparation, and competitive exam
+                support.
+              </p>
+            </article>
+          </div>
+
+          <h2 class="section-title">Sample weekly timetable</h2>
+          <p class="section-subtitle">
+            Timetables are managed dynamically in the student and teacher
+            dashboards. Here is a sample for Grade 9.
+          </p>
+
+          <div class="table-wrapper card mb-4">
+            <div class="table-filter">
+              <input
+                type="text"
+                placeholder="Filter by subject / teacher"
+                data-table-filter="#timetableTable"
+              />
+            </div>
+            <table class="table" id="timetableTable">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Period 1</th>
+                  <th>Period 2</th>
+                  <th>Period 3</th>
+                  <th>Period 4</th>
+                  <th>Period 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>Mathematics (Mr. Rahul)</td>
+                  <td>English (Ms. Suhani)</td>
+                  <td>Physics (Ms. Sana)</td>
+                  <td>History (Mr. Arjun)</td>
+                  <td>Games</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Chemistry (Ms. Kavya)</td>
+                  <td>Mathematics (Mr. Rahul)</td>
+                  <td>Computer Science (Mr. Dev)</td>
+                  <td>Geography (Ms. Priya)</td>
+                  <td>Art &amp; Craft</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Biology (Ms. Ritu)</td>
+                  <td>English (Ms. Suhani)</td>
+                  <td>Mathematics (Mr. Rahul)</td>
+                  <td>Physics Lab</td>
+                  <td>Library</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Mathematics (Mr. Rahul)</td>
+                  <td>Chemistry (Ms. Kavya)</td>
+                  <td>Computer Lab</td>
+                  <td>History (Mr. Arjun)</td>
+                  <td>Sports</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>English (Ms. Suhani)</td>
+                  <td>Biology (Ms. Ritu)</td>
+                  <td>Geography (Ms. Priya)</td>
+                  <td>Life Skills</td>
+                  <td>Club Activities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="section-title">Co-curricular programs</h2>
+          <p class="section-subtitle">
+            Students can choose from a variety of clubs and enrichment programs
+            to pursue their interests.
+          </p>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3 class="mb-2">STEM &amp; Innovation</h3>
+              <ul class="page-aside-list">
+                <li><i class="fa-solid fa-check"></i> Robotics club</li>
+                <li><i class="fa-solid fa-check"></i> Coding &amp; app dev</li>
+                <li><i class="fa-solid fa-check"></i> Math &amp; science circles</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="mb-2">Arts &amp; Culture</h3>
+              <ul class="page-aside-list">
+                <li><i class="fa-solid fa-check"></i> Music, choir, band</li>
+                <li><i class="fa-solid fa-check"></i> Drama &amp; theatre</li>
+                <li><i class="fa-solid fa-check"></i> Visual arts &amp; design</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="mb-2">Sports &amp; Wellness</h3>
+              <ul class="page-aside-list">
+                <li><i class="fa-solid fa-check"></i> Team &amp; individual sports</li>
+                <li><i class="fa-solid fa-check"></i> Yoga &amp; fitness</li>
+                <li><i class="fa-solid fa-check"></i> Mindfulness programs</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div>
+                <h4>BrightView School</h4>
+                <p>Smart School Management System</p>
+              </div>
+            </div>
+            <p>
+              Empowering students with knowledge, skills, and values to succeed
+              in a rapidly changing world.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="about.html">About School</a>
+              <a href="courses.html">Courses &amp; Curriculum</a>
+              <a href="admission.html">Admission Process</a>
+              <a href="events.html">News &amp; Events</a>
+              <a href="gallery.html">Campus Gallery</a>
+            </div>
+          </div>
+          <div>
+            <h4>Dashboards</h4>
+            <div class="footer-links">
+              <a href="dashboard-student.html">Student Dashboard</a>
+              <a href="dashboard-teacher.html">Teacher Dashboard</a>
+              <a href="attendance.html">Attendance</a>
+              <a href="results.html">Results</a>
+            </div>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer-contact">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                Sector 12, Greenfield City
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                +91-98765-43210
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@brightviewschool.edu
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="yearSpan"></span> BrightView School. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.getElementById('yearSpan').textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
+

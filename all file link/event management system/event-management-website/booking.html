@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Event - Eventora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">Eventora</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero booking-hero">
+            <div class="container page-hero-inner">
+                <div>
+                    <h1>Book Your Event</h1>
+                    <p>Share your plans with us. We’ll get back to you with a curated proposal and quotation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container booking-layout">
+                <div class="booking-info">
+                    <h2>Tell Us About Your Event</h2>
+                    <p>Fill in the form with as many details as possible so our team can prepare a personalized event
+                        plan and budget estimate for you.</p>
+                    <ul class="booking-benefits">
+                        <li><i class="fa-solid fa-circle-check"></i> Detailed proposal within 24–48 hours</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Flexible packages for all budgets</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Dedicated event consultant</li>
+                    </ul>
+                </div>
+
+                <div class="booking-form-card">
+                    <form id="bookingForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                                <small class="error-message"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span>*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com">
+                                <small class="error-message"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000">
+                                <small class="error-message"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventType">Event Type <span>*</span></label>
+                                <select id="eventType" name="eventType">
+                                    <option value="">Select event type</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Corporate Event">Corporate Event</option>
+                                    <option value="Birthday Party">Birthday Party</option>
+                                    <option value="Concert">Concert</option>
+                                    <option value="Conference">Conference</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <small class="error-message"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eventDate">Event Date <span>*</span></label>
+                                <input type="date" id="eventDate" name="eventDate">
+                                <small class="error-message"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests <span>*</span></label>
+                                <input type="number" id="guests" name="guests" placeholder="e.g. 150">
+                                <small class="error-message"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location <span>*</span></label>
+                            <input type="text" id="location" name="location" placeholder="City / Venue preference">
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message / Additional Details</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us more about your event, theme, and special requirements."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary-btn full-width">Submit Booking Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Success Popup -->
+        <div class="modal" id="bookingSuccessModal" aria-hidden="true">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close success message">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Booking Request Received!</h2>
+                <p>Thank you for choosing Eventora. Our team will review your details and contact you within 24–48
+                    hours.</p>
+                <button class="btn primary-btn modal-ok">OK, Great</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">Eventora</span>
+                </a>
+                <p>Premium event management company specializing in unforgettable experiences and flawless execution.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Festival Avenue, New City</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@eventora.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; <span id="year"></span> Eventora. All rights reserved.</p>
+                <p>Designed for modern, immersive events.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Azure Crest Hotel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><i class="fa-solid fa-hotel"></i> Azure Crest</a>
+      <nav>
+        <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="rooms.html">Rooms</a>
+          <a class="active" href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="booking.html">Booking</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Hotel Services</h1>
+      <p class="section-subtitle">Amenities curated to elevate every stay.</p>
+      <div class="grid grid-4">
+        <div class="card service-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Restaurant</h3>
+          <p>Seasonal menus, artisanal cocktails, and elevated dining experiences.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-bell-concierge"></i>
+          <h3>Room Service</h3>
+          <p>In-room dining, available morning to late evening.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-spa"></i>
+          <h3>Spa & Wellness</h3>
+          <p>Signature treatments, sauna, and relaxation lounge.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-person-swimming"></i>
+          <h3>Swimming Pool</h3>
+          <p>Heated indoor pool with panoramic city views.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h3>Gym</h3>
+          <p>Modern equipment and personal training on request.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-chalkboard"></i>
+          <h3>Conference Hall</h3>
+          <p>Flexible venues with full AV support for events.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-wifi"></i>
+          <h3>Free WiFi</h3>
+          <p>High-speed connectivity throughout the property.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fa-solid fa-plane-arrival"></i>
+          <h3>Airport Pickup</h3>
+          <p>Seamless transfers arranged by our concierge team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <a class="logo" href="index.html"><i class="fa-solid fa-hotel"></i> Azure Crest</a>
+        <p>Modern and elegant hospitality in the city’s cultural heart.</p>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="about.html">About</a></p>
+        <p><a href="rooms.html">Rooms</a></p>
+        <p><a href="gallery.html">Gallery</a></p>
+      </div>
+      <div>
+        <h3>Guest Services</h3>
+        <p><a href="booking.html">Booking</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="index.html#features">Amenities</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>123 Azure Blvd, Downtown</p>
+        <p>+1 (555) 010-2233</p>
+        <p>stay@azurecrest.com</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Azure Crest Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="jquery/jquery.min.js"><\\/script>')</script>
+  <script src="js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

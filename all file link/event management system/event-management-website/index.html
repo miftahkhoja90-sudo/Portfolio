@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventora - Event Management</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">Eventora</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Create Unforgettable Experiences</h1>
+                    <p>Professional event management for weddings, corporate events, concerts, conferences, and more.
+                        We plan, design, and execute seamless events that wow your guests.</p>
+                    <div class="hero-actions">
+                        <a href="booking.html" class="btn primary-btn">Book Event</a>
+                        <a href="events.html" class="btn ghost-btn">View Upcoming Events</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">750+</span>
+                            <span class="stat-label">Events Organized</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-card gradient-border">
+                        <img src="images/hero-event.jpg" alt="Event management" class="hero-image">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-star"></i>
+                            Top Rated Event Planner
+                        </div>
+                        <div class="hero-floating-card">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <div>
+                                <p>Next Big Event</p>
+                                <span>Luxury Wedding • 450 Guests</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section class="section" id="featured-events">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Events</h2>
+                    <p>Explore some of our most memorable and successful events.</p>
+                </div>
+                <div class="grid events-grid">
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/event-wedding.jpg" alt="Royal Wedding Gala">
+                            <span class="event-tag wedding">Wedding</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Royal Wedding Gala</h3>
+                            <p>Lavish decor, elegant lighting, and a magical ambiance for an unforgettable wedding
+                                celebration.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 28 Apr 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Paris, France</span>
+                            </div>
+                            <a href="booking.html" class="text-link">Book Similar Event</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/event-corporate.jpg" alt="Global Tech Conference">
+                            <span class="event-tag corporate">Corporate</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Global Tech Conference</h3>
+                            <p>State-of-the-art conference setup with live streaming, branding, and VIP experiences.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 12 May 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> San Francisco, USA</span>
+                            </div>
+                            <a href="booking.html" class="text-link">Book Similar Event</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/event-concert.jpg" alt="City Lights Music Fest">
+                            <span class="event-tag concert">Concert</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>City Lights Music Fest</h3>
+                            <p>High-energy outdoor concert with immersive lights, sound, and stage effects.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 03 Jun 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> London, UK</span>
+                            </div>
+                            <a href="booking.html" class="text-link">Book Similar Event</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section section-alt" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <p>End-to-end event management tailored to your vision and budget.</p>
+                </div>
+                <div class="grid services-grid">
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-heart"></i></span>
+                        <h3>Wedding Planning</h3>
+                        <p>From intimate ceremonies to grand celebrations, we create picture-perfect weddings.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-briefcase"></i></span>
+                        <h3>Corporate Events</h3>
+                        <p>Conferences, product launches, gala dinners, and team-building retreats.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                        <h3>Birthday Parties</h3>
+                        <p>Themed birthday parties for kids, teens, and adults with engaging activities.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+                        <h3>Concerts & Festivals</h3>
+                        <p>Stage design, artist management, production, security, and crowd control.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></span>
+                        <h3>Workshops & Seminars</h3>
+                        <p>Professional and educational events with flawless technical execution.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon"><i class="fa-solid fa-glass-cheers"></i></span>
+                        <h3>Private Gatherings</h3>
+                        <p>Anniversaries, engagements, baby showers, and luxury social gatherings.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="section" id="highlights">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Event Highlights</h2>
+                    <p>We handle every detail, so you can enjoy the moment.</p>
+                </div>
+                <div class="highlights-layout">
+                    <ul class="highlight-list">
+                        <li><i class="fa-solid fa-check"></i> Creative concept and theme development</li>
+                        <li><i class="fa-solid fa-check"></i> Venue selection and vendor coordination</li>
+                        <li><i class="fa-solid fa-check"></i> Stage, sound, and lighting design</li>
+                        <li><i class="fa-solid fa-check"></i> Guest management and hospitality</li>
+                        <li><i class="fa-solid fa-check"></i> On-site event supervision</li>
+                        <li><i class="fa-solid fa-check"></i> Custom branding and digital experiences</li>
+                    </ul>
+                    <div class="highlight-image">
+                        <img src="images/event-highlight.jpg" alt="Event highlights">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Slider -->
+        <section class="section section-alt" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Real stories from clients who trusted us with their most important moments.</p>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial-track">
+                        <article class="testimonial">
+                            <p class="testimonial-text">“Eventora turned our wedding into a fairytale. The decor, music,
+                                and coordination were flawless. We did not have to worry about a single detail.”</p>
+                            <div class="testimonial-footer">
+                                <div>
+                                    <h3>Sarah &amp; Daniel</h3>
+                                    <span>Wedding Clients</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonial">
+                            <p class="testimonial-text">“Our annual corporate summit was a huge success. The Eventora
+                                team handled everything professionally and creatively.”</p>
+                            <div class="testimonial-footer">
+                                <div>
+                                    <h3>Michael Lee</h3>
+                                    <span>Corporate Client</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonial">
+                            <p class="testimonial-text">“From artist management to sound and stage, Eventora delivered a
+                                world-class music festival experience for our audience.”</p>
+                            <div class="testimonial-footer">
+                                <div>
+                                    <h3>Amelia Brown</h3>
+                                    <span>Festival Organizer</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev" aria-label="Previous testimonial">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" aria-label="Next testimonial">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section cta-section" id="cta">
+            <div class="container cta-inner">
+                <div class="cta-text">
+                    <h2>Ready to Plan Your Next Event?</h2>
+                    <p>Share your ideas with us and we’ll turn them into a stunning reality.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="booking.html" class="btn primary-btn">Book an Event</a>
+                    <a href="contact.html" class="btn ghost-btn">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">Eventora</span>
+                </a>
+                <p>Premium event management company specializing in unforgettable experiences and flawless execution.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Festival Avenue, New City</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@eventora.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; <span id="year"></span> Eventora. All rights reserved.</p>
+                <p>Designed for modern, immersive events.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

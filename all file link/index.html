@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXMART — Next-Gen Shopping Experience</title>
+<meta name="description" content="NEXMART — Premium e-commerce platform with AI recommendations, voice search, and exclusive deals">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- DARK MODE TOGGLE -->
+<button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+  <i class="fas fa-moon" id="themeIcon"></i>
+</button>
+
+<!-- LIVE CHAT BUTTON -->
+<button class="live-chat-btn" id="liveChatBtn">
+  <i class="fas fa-comment-dots"></i>
+  <span class="chat-badge">1</span>
+</button>
+
+<!-- LIVE CHAT POPUP -->
+<div class="live-chat-popup" id="liveChatPopup">
+  <div class="chat-header">
+    <div class="chat-agent">
+      <div class="agent-avatar"><i class="fas fa-robot"></i></div>
+      <div><strong>NEXMART Support</strong><br><small class="text-success">● Online</small></div>
+    </div>
+    <button class="btn-close btn-close-white" onclick="$('#liveChatPopup').removeClass('active')"></button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-bubble bot">Hey! 👋 Welcome to NEXMART. How can I help you today?</div>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <div class="marquee-content">
+    🔥 MEGA SALE: Up to 70% OFF on Electronics &nbsp;|&nbsp; 🚀 Free Shipping on orders above ₹499 &nbsp;|&nbsp; 💳 Extra 10% Cashback with NEXCARD &nbsp;|&nbsp; 🎁 Use code NEXMART20 for 20% OFF &nbsp;|&nbsp; ⭐ Earn 2X Reward Points this weekend &nbsp;|&nbsp;
+    🔥 MEGA SALE: Up to 70% OFF on Electronics &nbsp;|&nbsp; 🚀 Free Shipping on orders above ₹499 &nbsp;|&nbsp; 💳 Extra 10% Cashback with NEXCARD &nbsp;|&nbsp; 🎁 Use code NEXMART20 for 20% OFF &nbsp;|&nbsp; ⭐ Earn 2X Reward Points this weekend
+  </div>
+</div>
+
+<!-- STICKY HEADER -->
+<header class="main-header" id="mainHeader">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+      <!-- LOGO -->
+      <a class="navbar-brand" href="#" onclick="showPage('home')">
+        <span class="logo-text">NEX<span class="logo-accent">MART</span></span>
+      </a>
+
+      <!-- SEARCH BAR -->
+      <div class="search-container flex-grow-1 mx-3 mx-lg-4">
+        <div class="search-wrap">
+          <div class="search-category-select">
+            <select id="searchCategory">
+              <option>All</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Home</option>
+              <option>Sports</option>
+            </select>
+          </div>
+          <input type="text" id="searchInput" placeholder="Search for products, brands, categories..." autocomplete="off">
+          <button class="search-voice-btn" id="voiceSearchBtn" title="Voice Search">
+            <i class="fas fa-microphone"></i>
+          </button>
+          <button class="search-btn" onclick="performSearch()"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+
+      <!-- NAV ACTIONS -->
+      <div class="nav-actions d-flex align-items-center gap-2 gap-lg-3">
+        <div class="nav-action-item d-none d-lg-flex" onclick="showPage('account')">
+          <div class="action-icon-wrap"><i class="fas fa-user"></i></div>
+          <div class="action-text"><small>Hello, Sign in</small><strong>Account</strong></div>
+        </div>
+        <div class="nav-action-item d-none d-lg-flex" onclick="showPage('account'); showTab('orders')">
+          <div class="action-icon-wrap"><i class="fas fa-box"></i></div>
+          <div class="action-text"><small>Track</small><strong>Orders</strong></div>
+        </div>
+        <button class="btn nav-wishlist-btn" onclick="showPage('account'); showTab('wishlist')">
+          <i class="fas fa-heart"></i>
+          <span class="badge wishlist-count" id="wishlistCount">0</span>
+        </button>
+        <button class="btn nav-cart-btn" onclick="showPage('cart')">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge cart-count" id="cartCount">0</span>
+        </button>
+        <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MEGA MENU BAR -->
+    <div class="mega-menu-bar d-none d-lg-block">
+      <div class="container-fluid px-4">
+        <ul class="mega-menu-list">
+          <li class="has-mega"><a href="#" onclick="showPage('home')"><i class="fas fa-home me-1"></i>Home</a></li>
+          <li class="has-mega">
+            <a href="#">Electronics <i class="fas fa-chevron-down ms-1"></i></a>
+            <div class="mega-dropdown">
+              <div class="row">
+                <div class="col-3">
+                  <h6>📱 Mobiles</h6>
+                  <ul><li><a href="#">Smartphones</a></li><li><a href="#">Feature Phones</a></li><li><a href="#">Accessories</a></li></ul>
+                </div>
+                <div class="col-3">
+                  <h6>💻 Computers</h6>
+                  <ul><li><a href="#">Laptops</a></li><li><a href="#">Desktops</a></li><li><a href="#">Tablets</a></li></ul>
+                </div>
+                <div class="col-3">
+                  <h6>📺 TV & Audio</h6>
+                  <ul><li><a href="#">Smart TVs</a></li><li><a href="#">Headphones</a></li><li><a href="#">Speakers</a></li></ul>
+                </div>
+                <div class="col-3">
+                  <h6>🔌 Appliances</h6>
+                  <ul><li><a href="#">Kitchen</a></li><li><a href="#">Washing Machines</a></li><li><a href="#">Air Conditioners</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="has-mega">
+            <a href="#">Fashion <i class="fas fa-chevron-down ms-1"></i></a>
+            <div class="mega-dropdown">
+              <div class="row">
+                <div class="col-4"><h6>👔 Men</h6><ul><li><a href="#">T-Shirts</a></li><li><a href="#">Shirts</a></li><li><a href="#">Jeans</a></li></ul></div>
+                <div class="col-4"><h6>👗 Women</h6><ul><li><a href="#">Kurtas</a></li><li><a href="#">Sarees</a></li><li><a href="#">Dresses</a></li></ul></div>
+                <div class="col-4"><h6>👶 Kids</h6><ul><li><a href="#">Boys</a></li><li><a href="#">Girls</a></li><li><a href="#">Infants</a></li></ul></div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" onclick="showPage('products')">Products</a></li>
+          <li><a href="#" class="daily-deals-link">Daily Deals <span class="hot-badge">HOT</span></a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#" onclick="showPage('home'); closeMobileMenu()"><i class="fas fa-home"></i> Home</a>
+      <a href="#" onclick="showPage('products'); closeMobileMenu()"><i class="fas fa-th-large"></i> Products</a>
+      <a href="#" onclick="showPage('account'); closeMobileMenu()"><i class="fas fa-user"></i> My Account</a>
+      <a href="#" onclick="showPage('cart'); closeMobileMenu()"><i class="fas fa-cart-shopping"></i> Cart</a>
+      <a href="#" onclick="showPage('about'); closeMobileMenu()"><i class="fas fa-info-circle"></i> About</a>
+      <a href="#" onclick="showPage('contact'); closeMobileMenu()"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== PAGES ==================== -->
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+
+  <!-- HERO SLIDER -->
+  <section class="hero-section">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);">
+        <div class="container-fluid px-4">
+          <div class="row align-items-center min-vh-slider">
+            <div class="col-lg-6 hero-content">
+              <div class="hero-tag">🔥 Limited Time Offer</div>
+              <h1 class="hero-title">Next-Gen <span class="gradient-text">Tech Deals</span> Are Here</h1>
+              <p class="hero-subtitle">Discover premium electronics with AI-powered recommendations just for you</p>
+              <div class="hero-stats d-flex gap-4 mb-4">
+                <div><strong>50K+</strong><br><small>Products</small></div>
+                <div><strong>2M+</strong><br><small>Customers</small></div>
+                <div><strong>4.9★</strong><br><small>Rating</small></div>
+              </div>
+              <div class="hero-btns d-flex gap-3">
+                <button class="btn btn-hero-primary" onclick="showPage('products')">Shop Now <i class="fas fa-arrow-right ms-2"></i></button>
+                <button class="btn btn-hero-outline">View Deals</button>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center">
+              <div class="hero-product-float">
+                <div class="floating-card card-1">⭐ 4.9/5 Rating</div>
+                <div class="floating-card card-2">🚀 Fast Delivery</div>
+                <div class="floating-card card-3">💎 Premium Quality</div>
+                <div class="hero-phone-mockup">
+                  <i class="fas fa-mobile-screen"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">
+        <div class="container-fluid px-4">
+          <div class="row align-items-center min-vh-slider">
+            <div class="col-lg-6 hero-content">
+              <div class="hero-tag">👗 New Collection</div>
+              <h1 class="hero-title">Style That <span class="gradient-text-2">Speaks</span> For You</h1>
+              <p class="hero-subtitle">Explore thousands of fashion items curated by AI style experts</p>
+              <div class="hero-btns d-flex gap-3">
+                <button class="btn btn-hero-primary" onclick="showPage('products')">Explore Fashion <i class="fas fa-arrow-right ms-2"></i></button>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center">
+              <div class="hero-fashion-mockup"><i class="fas fa-tshirt"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background: linear-gradient(135deg, #0d1117, #161b22, #1f2937);">
+        <div class="container-fluid px-4">
+          <div class="row align-items-center min-vh-slider">
+            <div class="col-lg-6 hero-content">
+              <div class="hero-tag">🏠 Home Makeover</div>
+              <h1 class="hero-title">Transform Your <span class="gradient-text-3">Living Space</span></h1>
+              <p class="hero-subtitle">Premium home & lifestyle products at unbeatable prices</p>
+              <div class="hero-btns d-flex gap-3">
+                <button class="btn btn-hero-primary" onclick="showPage('products')">Shop Home <i class="fas fa-arrow-right ms-2"></i></button>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center">
+              <div class="hero-home-mockup"><i class="fas fa-couch"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="hero-dots" id="heroDots">
+        <span class="hero-dot active" onclick="goToSlide(0)"></span>
+        <span class="hero-dot" onclick="goToSlide(1)"></span>
+        <span class="hero-dot" onclick="goToSlide(2)"></span>
+      </div>
+      <button class="hero-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section class="trust-badges-section">
+    <div class="container-fluid px-4">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="trust-badge">
+            <i class="fas fa-shipping-fast"></i>
+            <div><strong>Free Shipping</strong><span>On orders ₹499+</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-badge">
+            <i class="fas fa-shield-alt"></i>
+            <div><strong>Secure Payment</strong><span>100% protected</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-badge">
+            <i class="fas fa-undo-alt"></i>
+            <div><strong>Easy Returns</strong><span>30 day policy</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-badge">
+            <i class="fas fa-headset"></i>
+            <div><strong>24/7 Support</strong><span>Always here for you</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLASH SALE COUNTDOWN -->
+  <section class="flash-sale-section">
+    <div class="container-fluid px-4">
+      <div class="flash-sale-header">
+        <div class="flash-title">
+          <span class="flash-icon">⚡</span>
+          <h2>Flash Sale</h2>
+          <span class="flash-sub">Ends In:</span>
+        </div>
+        <div class="countdown-timer" id="flashCountdown">
+          <div class="countdown-unit"><span id="fh">05</span><small>Hours</small></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span id="fm">32</span><small>Mins</small></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span id="fs">18</span><small>Secs</small></div>
+        </div>
+        <button class="btn btn-see-all" onclick="showPage('products')">See All <i class="fas fa-arrow-right ms-1"></i></button>
+      </div>
+      <div class="row g-3" id="flashSaleProducts"></div>
+    </div>
+  </section>
+
+  <!-- SHOP BY MOOD -->
+  <section class="mood-section">
+    <div class="container-fluid px-4">
+      <div class="section-header">
+        <h2 class="section-title">Shop By <span class="accent">Mood</span></h2>
+        <p class="section-sub">Your vibe, your choice</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-budget" onclick="filterByMood('budget')">
+            <div class="mood-emoji">💰</div>
+            <h5>Budget Shopping</h5>
+            <p>Under ₹999</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-trending" onclick="filterByMood('trending')">
+            <div class="mood-emoji">🔥</div>
+            <h5>Trending Now</h5>
+            <p>Hot picks</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-luxury" onclick="filterByMood('luxury')">
+            <div class="mood-emoji">💎</div>
+            <h5>Luxury Picks</h5>
+            <p>Premium quality</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-gift" onclick="filterByMood('gift')">
+            <div class="mood-emoji">🎁</div>
+            <h5>Gift Ideas</h5>
+            <p>For your loved ones</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-eco" onclick="filterByMood('eco')">
+            <div class="mood-emoji">🌿</div>
+            <h5>Eco Friendly</h5>
+            <p>Sustainable picks</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="mood-card mood-office" onclick="filterByMood('office')">
+            <div class="mood-emoji">💼</div>
+            <h5>Work From Home</h5>
+            <p>Office essentials</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CATEGORIES -->
+  <section class="categories-section">
+    <div class="container-fluid px-4">
+      <div class="section-header">
+        <h2 class="section-title">Shop By <span class="accent">Category</span></h2>
+        <button class="btn btn-see-all" onclick="showPage('products')">View All <i class="fas fa-arrow-right ms-1"></i></button>
+      </div>
+      <div class="row g-3" id="categoriesGrid"></div>
+    </div>
+  </section>
+
+  <!-- TRENDING PRODUCTS -->
+  <section class="products-section">
+    <div class="container-fluid px-4">
+      <div class="section-header">
+        <h2 class="section-title">Trending <span class="accent">Products</span></h2>
+        <div class="section-tabs">
+          <button class="sec-tab active" onclick="filterSection(this,'all')">All</button>
+          <button class="sec-tab" onclick="filterSection(this,'electronics')">Electronics</button>
+          <button class="sec-tab" onclick="filterSection(this,'fashion')">Fashion</button>
+          <button class="sec-tab" onclick="filterSection(this,'home')">Home</button>
+        </div>
+      </div>
+      <div class="row g-3" id="trendingProducts"></div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNERS -->
+  <section class="promo-banners-section">
+    <div class="container-fluid px-4">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="promo-banner promo-1">
+            <div class="promo-content">
+              <span class="promo-badge">Special Offer</span>
+              <h3>Upto 50% OFF<br>on Electronics</h3>
+              <button class="btn btn-promo" onclick="showPage('products')">Shop Now →</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="promo-banner promo-2">
+            <div class="promo-content">
+              <span class="promo-badge">New Arrivals</span>
+              <h3>Fresh Fashion<br>Drops Daily</h3>
+              <button class="btn btn-promo" onclick="showPage('products')">Explore →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST DEALS -->
+  <section class="best-deals-section">
+    <div class="container-fluid px-4">
+      <div class="section-header">
+        <h2 class="section-title">Best <span class="accent">Deals</span> Today</h2>
+        <button class="btn btn-see-all" onclick="showPage('products')">See All <i class="fas fa-arrow-right ms-1"></i></button>
+      </div>
+      <div class="row g-3" id="bestDeals"></div>
+    </div>
+  </section>
+
+  <!-- AI RECOMMENDATIONS -->
+  <section class="ai-section">
+    <div class="container-fluid px-4">
+      <div class="ai-banner">
+        <div class="ai-badge"><i class="fas fa-brain"></i> AI Powered</div>
+        <h2>Recommended <span class="accent">Just For You</span></h2>
+        <p>Our AI learns your preferences to show you products you'll love</p>
+      </div>
+      <div class="row g-3" id="aiRecommendations"></div>
+    </div>
+  </section>
+
+  <!-- REWARD POINTS -->
+  <section class="rewards-section">
+    <div class="container-fluid px-4">
+      <div class="rewards-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="rewards-content">
+              <span class="rewards-badge">⭐ NEXPOINTS</span>
+              <h2>Earn Rewards With Every Purchase</h2>
+              <p>Get 1 NEXPOINT for every ₹10 spent. Redeem for discounts, free shipping, and exclusive perks!</p>
+              <div class="rewards-perks d-flex gap-4 mt-3">
+                <div class="perk"><i class="fas fa-star"></i><span>1 Point / ₹10</span></div>
+                <div class="perk"><i class="fas fa-gift"></i><span>Redeem Anytime</span></div>
+                <div class="perk"><i class="fas fa-crown"></i><span>VIP Status</span></div>
+              </div>
+              <button class="btn btn-rewards mt-4" onclick="showPage('account')">Join Now — It's Free</button>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center d-none d-lg-block">
+            <div class="rewards-visual">
+              <div class="points-circle">
+                <span class="points-num">500</span>
+                <span class="points-label">WELCOME<br>POINTS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS -->
+  <section class="reviews-section">
+    <div class="container-fluid px-4">
+      <div class="section-header text-center">
+        <h2 class="section-title">What Our <span class="accent">Customers</span> Say</h2>
+        <p class="section-sub">Trusted by over 2 million happy shoppers</p>
+      </div>
+      <div class="row g-3" id="customerReviews"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container-fluid px-4">
+      <div class="newsletter-box">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2>Stay Ahead with <span class="accent">Exclusive Deals</span></h2>
+            <p>Subscribe and get 20% OFF your first order + early access to sales</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email address" id="newsletterEmail">
+              <button onclick="subscribeNewsletter()">Subscribe <i class="fas fa-paper-plane ms-2"></i></button>
+            </div>
+            <small class="text-muted mt-2 d-block">No spam, unsubscribe anytime. 🔒 Privacy protected</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PRODUCTS PAGE -->
+<div id="page-products" class="page">
+  <div class="page-hero">
+    <div class="container-fluid px-4">
+      <h1>All Products</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb"><li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li><li class="breadcrumb-item active">Products</li></ol>
+      </nav>
+    </div>
+  </div>
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-4">
+      <!-- FILTERS SIDEBAR -->
+      <div class="col-lg-3 col-xl-2">
+        <div class="filter-sidebar" id="filterSidebar">
+          <div class="filter-header d-flex justify-content-between align-items-center">
+            <h5><i class="fas fa-filter me-2"></i>Filters</h5>
+            <button class="btn btn-link btn-sm" onclick="clearFilters()">Clear All</button>
+          </div>
+          <div class="filter-group">
+            <h6>Categories</h6>
+            <div class="filter-options" id="categoryFilters"></div>
+          </div>
+          <div class="filter-group">
+            <h6>Price Range</h6>
+            <div class="price-range-wrap">
+              <div class="price-display d-flex justify-content-between">
+                <span>₹<span id="priceMin">0</span></span>
+                <span>₹<span id="priceMax">50000</span></span>
+              </div>
+              <input type="range" class="form-range" id="priceRangeMax" min="0" max="50000" value="50000" oninput="updatePriceFilter(this.value)">
+            </div>
+          </div>
+          <div class="filter-group">
+            <h6>Rating</h6>
+            <div class="rating-filters">
+              <label class="rating-filter-item"><input type="checkbox" value="4"> ⭐⭐⭐⭐ & above</label>
+              <label class="rating-filter-item"><input type="checkbox" value="3"> ⭐⭐⭐ & above</label>
+              <label class="rating-filter-item"><input type="checkbox" value="2"> ⭐⭐ & above</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h6>Discount</h6>
+            <label class="rating-filter-item"><input type="checkbox" value="10"> 10% or more</label>
+            <label class="rating-filter-item"><input type="checkbox" value="20"> 20% or more</label>
+            <label class="rating-filter-item"><input type="checkbox" value="30"> 30% or more</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="col-lg-9 col-xl-10">
+        <div class="products-toolbar d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+          <div class="results-count"><span id="productCount">0</span> Products Found</div>
+          <div class="toolbar-actions d-flex gap-2 align-items-center">
+            <select class="form-select form-select-sm sort-select" onchange="sortProducts(this.value)" id="sortSelect">
+              <option value="popularity">Sort: Popularity</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+              <option value="newest">Newest First</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')"><i class="fas fa-th"></i></button>
+              <button class="view-btn" id="listViewBtn" onclick="setView('list')"><i class="fas fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3" id="productsGrid"></div>
+        <div class="text-center mt-4">
+          <button class="btn btn-load-more" id="loadMoreBtn" onclick="loadMoreProducts()">Load More Products <i class="fas fa-arrow-down ms-2"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL PAGE -->
+<div id="page-product-detail" class="page">
+  <div class="container-fluid px-4 py-4" id="productDetailContent"></div>
+</div>
+
+<!-- CART PAGE -->
+<div id="page-cart" class="page">
+  <div class="page-hero">
+    <div class="container-fluid px-4">
+      <h1>Shopping Cart</h1>
+      <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li><li class="breadcrumb-item active">Cart</li></ol></nav>
+    </div>
+  </div>
+  <div class="container-fluid px-4 py-4">
+    <div id="cartContent"></div>
+  </div>
+</div>
+
+<!-- CHECKOUT PAGE -->
+<div id="page-checkout" class="page">
+  <div class="page-hero">
+    <div class="container-fluid px-4"><h1>Checkout</h1></div>
+  </div>
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="checkout-form-card">
+          <h4 class="mb-4"><i class="fas fa-user me-2 text-accent"></i>Delivery Information</h4>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">First Name *</label><input type="text" class="form-control" placeholder="John"></div>
+            <div class="col-md-6"><label class="form-label">Last Name *</label><input type="text" class="form-control" placeholder="Doe"></div>
+            <div class="col-12"><label class="form-label">Email Address *</label><input type="email" class="form-control" placeholder="john@example.com"></div>
+            <div class="col-md-6"><label class="form-label">Phone Number *</label><input type="tel" class="form-control" placeholder="+91 98765 43210"></div>
+            <div class="col-md-6"><label class="form-label">PIN Code *</label><input type="text" class="form-control" placeholder="400001"></div>
+            <div class="col-12"><label class="form-label">Full Address *</label><textarea class="form-control" rows="2" placeholder="House/Flat, Street, Area"></textarea></div>
+            <div class="col-md-6"><label class="form-label">City *</label><input type="text" class="form-control" placeholder="Mumbai"></div>
+            <div class="col-md-6"><label class="form-label">State *</label><select class="form-select"><option>Select State</option><option>Gujarat</option><option>Maharashtra</option><option>Delhi</option><option>Karnataka</option></select></div>
+          </div>
+
+          <h4 class="mt-4 mb-3"><i class="fas fa-credit-card me-2 text-accent"></i>Payment Method</h4>
+          <div class="payment-options">
+            <label class="payment-option active"><input type="radio" name="payment" value="card" checked> <i class="fas fa-credit-card"></i> Credit / Debit Card</label>
+            <label class="payment-option"><input type="radio" name="payment" value="upi"> <i class="fas fa-mobile-alt"></i> UPI Payment</label>
+            <label class="payment-option"><input type="radio" name="payment" value="wallet"> <i class="fas fa-wallet"></i> Wallet / Netbanking</label>
+            <label class="payment-option"><input type="radio" name="payment" value="cod"> <i class="fas fa-money-bill-wave"></i> Cash on Delivery</label>
+          </div>
+          <div class="card-details mt-3" id="cardDetails">
+            <input type="text" class="form-control mb-2" placeholder="Card Number (1234 5678 9012 3456)">
+            <div class="row g-2">
+              <div class="col-6"><input type="text" class="form-control" placeholder="MM/YY"></div>
+              <div class="col-6"><input type="text" class="form-control" placeholder="CVV"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="checkout-summary-card" id="checkoutSummary"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACCOUNT PAGE -->
+<div id="page-account" class="page">
+  <div class="page-hero">
+    <div class="container-fluid px-4"><h1>My Account</h1></div>
+  </div>
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-4">
+      <div class="col-lg-3">
+        <div class="account-sidebar">
+          <div class="account-avatar-wrap text-center mb-3">
+            <div class="account-avatar"><i class="fas fa-user"></i></div>
+            <h5 class="mt-2">Welcome Back!</h5>
+            <div class="reward-points-badge"><i class="fas fa-star"></i> 1,250 NEXPOINTS</div>
+          </div>
+          <nav class="account-nav">
+            <button class="acc-nav-btn active" onclick="showTab('profile')" id="tab-profile"><i class="fas fa-user-circle"></i> Profile</button>
+            <button class="acc-nav-btn" onclick="showTab('orders')" id="tab-orders"><i class="fas fa-box"></i> Orders</button>
+            <button class="acc-nav-btn" onclick="showTab('wishlist')" id="tab-wishlist"><i class="fas fa-heart"></i> Wishlist <span class="badge ms-auto" id="wishlistBadge">0</span></button>
+            <button class="acc-nav-btn" onclick="showTab('settings')" id="tab-settings"><i class="fas fa-cog"></i> Settings</button>
+          </nav>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <!-- PROFILE TAB -->
+        <div id="account-tab-profile" class="account-tab active">
+          <div class="account-card">
+            <h4 class="mb-4">Profile Information</h4>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">First Name</label><input type="text" class="form-control" value="Rahul"></div>
+              <div class="col-md-6"><label class="form-label">Last Name</label><input type="text" class="form-control" value="Sharma"></div>
+              <div class="col-12"><label class="form-label">Email</label><input type="email" class="form-control" value="rahul@example.com"></div>
+              <div class="col-md-6"><label class="form-label">Phone</label><input type="tel" class="form-control" value="+91 98765 43210"></div>
+              <div class="col-md-6"><label class="form-label">Date of Birth</label><input type="date" class="form-control" value="1995-03-15"></div>
+              <div class="col-12"><button class="btn btn-nexmart">Save Changes</button></div>
+            </div>
+          </div>
+        </div>
+        <!-- ORDERS TAB -->
+        <div id="account-tab-orders" class="account-tab">
+          <div class="account-card">
+            <h4 class="mb-4">Order History</h4>
+            <div id="orderHistory"></div>
+          </div>
+        </div>
+        <!-- WISHLIST TAB -->
+        <div id="account-tab-wishlist" class="account-tab">
+          <div class="account-card">
+            <h4 class="mb-4">My Wishlist</h4>
+            <div class="row g-3" id="wishlistGrid"></div>
+          </div>
+        </div>
+        <!-- SETTINGS TAB -->
+        <div id="account-tab-settings" class="account-tab">
+          <div class="account-card">
+            <h4 class="mb-4">Account Settings</h4>
+            <div class="settings-list">
+              <div class="setting-item d-flex justify-content-between align-items-center">
+                <div><strong>Email Notifications</strong><p class="mb-0 text-muted">Receive order updates via email</p></div>
+                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+              </div>
+              <div class="setting-item d-flex justify-content-between align-items-center">
+                <div><strong>SMS Alerts</strong><p class="mb-0 text-muted">Order tracking via SMS</p></div>
+                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+              </div>
+              <div class="setting-item d-flex justify-content-between align-items-center">
+                <div><strong>Dark Mode</strong><p class="mb-0 text-muted">Switch between themes</p></div>
+                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="settingsDarkMode" onchange="toggleTheme()"></div>
+              </div>
+              <div class="mt-3"><button class="btn btn-danger btn-sm">Change Password</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" class="page">
+  <div class="about-hero">
+    <div class="container-fluid px-4 text-center py-5">
+      <h1 class="display-4 fw-bold mb-3">About <span class="accent">NEXMART</span></h1>
+      <p class="lead">Redefining the way India shops online</p>
+    </div>
+  </div>
+  <div class="container-fluid px-4 py-5">
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-6">
+        <div class="about-content">
+          <span class="about-tag">Our Story</span>
+          <h2 class="mt-2 mb-3">Built for the <span class="accent">Future</span> of Commerce</h2>
+          <p>NEXMART was founded in 2024 with a bold vision — to create a shopping experience that feels personal, intelligent, and genuinely delightful. We combined cutting-edge AI with human-centered design to build a platform that grows smarter with every interaction.</p>
+          <p>From a small startup to serving 2 million+ customers, we've always stayed true to our core belief: every shopper deserves a premium experience, regardless of budget.</p>
+          <div class="about-stats row g-3 mt-4">
+            <div class="col-6 col-md-3"><div class="stat-box"><strong>2M+</strong><span>Customers</span></div></div>
+            <div class="col-6 col-md-3"><div class="stat-box"><strong>50K+</strong><span>Products</span></div></div>
+            <div class="col-6 col-md-3"><div class="stat-box"><strong>500+</strong><span>Brands</span></div></div>
+            <div class="col-6 col-md-3"><div class="stat-box"><strong>4.9★</strong><span>Rating</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-visual">
+          <div class="about-card-grid">
+            <div class="about-card ac-1"><i class="fas fa-brain"></i><h5>AI-Powered</h5></div>
+            <div class="about-card ac-2"><i class="fas fa-lock"></i><h5>Secure</h5></div>
+            <div class="about-card ac-3"><i class="fas fa-heart"></i><h5>Customer First</h5></div>
+            <div class="about-card ac-4"><i class="fas fa-leaf"></i><h5>Sustainable</h5></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mission-vision-row row g-4">
+      <div class="col-md-6">
+        <div class="mission-card">
+          <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To empower every Indian household with access to the best products at fair prices, powered by intelligent technology and delivered with genuine care.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="vision-card">
+          <div class="mv-icon"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>To become India's most loved and trusted shopping destination — a place where technology meets heart, and every purchase brings joy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <div class="container-fluid px-4"><h1>Contact Us</h1></div>
+  </div>
+  <div class="container-fluid px-4 py-5">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <h3 class="mb-4">Get In Touch</h3>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>Head Office</strong><p>NEXMART Tower, Prahlad Nagar, Ahmedabad, Gujarat 380015</p></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><strong>Customer Support</strong><p>+91 1800-NEX-MART (Toll Free)</p></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><strong>Email Us</strong><p>support@nexmart.in</p></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-clock"></i></div><div><strong>Working Hours</strong><p>Mon–Sat: 9AM–9PM IST</p></div></div>
+          <div class="social-links mt-4">
+            <h6>Follow Us</h6>
+            <div class="d-flex gap-2 mt-2">
+              <a href="#" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn ig"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn tw"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <h3 class="mb-4">Send Us a Message</h3>
+          <form onsubmit="submitContact(event)">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Your Name *</label><input type="text" class="form-control" placeholder="Rahul Sharma" required></div>
+              <div class="col-md-6"><label class="form-label">Email Address *</label><input type="email" class="form-control" placeholder="rahul@example.com" required></div>
+              <div class="col-md-6"><label class="form-label">Phone Number</label><input type="tel" class="form-control" placeholder="+91 98765 43210"></div>
+              <div class="col-md-6"><label class="form-label">Subject *</label><select class="form-select" required><option value="">Select Subject</option><option>Order Issue</option><option>Return/Refund</option><option>Product Inquiry</option><option>Partnership</option><option>Other</option></select></div>
+              <div class="col-12"><label class="form-label">Message *</label><textarea class="form-control" rows="4" placeholder="Write your message here..." required></textarea></div>
+              <div class="col-12"><button type="submit" class="btn btn-nexmart">Send Message <i class="fas fa-paper-plane ms-2"></i></button></div>
+            </div>
+          </form>
+        </div>
+        <div class="map-container mt-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58799.30059327613!2d72.5269963!3d23.0224978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d2a8000001%3A0x9ac84d25d5f76a0a!2sPrahlad%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1710500000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal fade" id="quickViewModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content quick-view-modal">
+      <button type="button" class="btn-close quick-view-close" data-bs-dismiss="modal"></button>
+      <div class="modal-body" id="quickViewContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+  <div id="nexToast" class="toast nex-toast" role="alert">
+    <div class="toast-body" id="toastMessage">
+      <i class="fas fa-check-circle text-success me-2"></i> Item added to cart!
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-top">
+    <div class="container-fluid px-4">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <span class="logo-text footer-logo">NEX<span class="logo-accent">MART</span></span>
+            <p class="mt-3">India's next-generation shopping platform. AI-powered, customer-first, always delivering the best.</p>
+            <div class="d-flex gap-2 mt-3">
+              <a href="#" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn ig"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn tw"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('products')">Products</a></li>
+            <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Customer</h6>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('account')">My Account</a></li>
+            <li><a href="#" onclick="showPage('cart')">Cart</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Download Our App</h6>
+          <p class="text-muted mb-3">Shop smarter with the NEXMART app</p>
+          <div class="app-btns d-flex flex-column gap-2">
+            <button class="app-btn"><i class="fab fa-google-play me-2"></i>Google Play</button>
+            <button class="app-btn"><i class="fab fa-apple me-2"></i>App Store</button>
+          </div>
+          <div class="payment-icons mt-3">
+            <img src="https://img.icons8.com/color/32/visa.png" alt="Visa">
+            <img src="https://img.icons8.com/color/32/mastercard.png" alt="Mastercard">
+            <img src="https://img.icons8.com/color/32/google-pay.png" alt="GPay">
+            <img src="https://img.icons8.com/color/32/paytm.png" alt="Paytm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid px-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="mb-0">© 2026 NEXMART. All rights reserved. Made with ❤️ in India</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

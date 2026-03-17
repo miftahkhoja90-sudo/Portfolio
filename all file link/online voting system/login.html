@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Login · SecureVote Online Voting System</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div class="nav-title-group">
+            <span class="nav-title">SecureVote</span>
+            <span class="nav-subtitle">Online Voting System</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="candidates.html">Candidates</a>
+          <a href="vote.html">Vote</a>
+          <a href="results.html">Results</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a
+            href="login.html"
+            class="btn btn-outline"
+          >
+            <i class="fa-regular fa-user"></i>
+            Login
+          </a>
+          <a
+            href="register.html"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-id-card"></i>
+            Register
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <div class="container">
+        <section>
+          <header class="section-header">
+            <div class="section-kicker">Access</div>
+            <h1 class="section-title">Login to your account</h1>
+            <p class="section-subtitle">
+              Sign in to access your voter dashboard or the admin console. This demo does
+              not validate credentials — it illustrates the UI only.
+            </p>
+          </header>
+
+          <article class="card form-card">
+            <form class="js-demo-form">
+              <div class="form-group">
+                <label class="form-label">
+                  Email or ID
+                  <span>*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="you@example.edu or STU‑2026‑0012"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <span>*</span>
+                </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Your password"
+                  required
+                />
+              </div>
+
+              <div class="form-row-between mt-2">
+                <div class="form-note">
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    checked
+                  />
+                  <label for="remember">Keep me signed in on this device.</label>
+                </div>
+                <a
+                  href="#"
+                  class="form-note"
+                  >Forgot password?</a
+                >
+              </div>
+
+              <div class="form-group mt-3">
+                <label class="form-label">Login as</label>
+                <div class="form-note">
+                  <input
+                    type="radio"
+                    id="login-voter"
+                    name="role"
+                    checked
+                  />
+                  <label for="login-voter">Voter</label>
+                  &nbsp;&nbsp;
+                  <input
+                    type="radio"
+                    id="login-admin"
+                    name="role"
+                  />
+                  <label for="login-admin">Administrator</label>
+                </div>
+              </div>
+
+              <div class="form-row-between mt-3">
+                <div class="form-note">
+                  New here?
+                  <a href="register.html">Create a voter account</a>.
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                  Login
+                </button>
+              </div>
+            </form>
+          </article>
+
+          <p class="alert alert-info mt-4">
+            In a full implementation, successful voter logins would redirect to the
+            <a href="voter-dashboard.html">Voter Dashboard</a>, and admins to the
+            <a href="admin-dashboard.html">Admin Dashboard</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <div class="nav-logo">
+                <i class="fa-solid fa-shield-check"></i>
+              </div>
+              <div class="nav-title-group">
+                <span class="nav-title">SecureVote</span>
+                <span class="nav-subtitle">Online Voting System</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 0.82rem">
+              Login sessions are typically protected with HTTPS, secure cookies and
+              optional multi‑factor authentication.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Shortcuts</h4>
+            <ul class="footer-links">
+              <li><a href="voter-dashboard.html">Voter dashboard (demo)</a></li>
+              <li><a href="admin-dashboard.html">Admin dashboard (demo)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Issues?</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact support</a></li>
+              <li><a href="faq.html">View login FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SecureVote. Demo login page.</span>
+          <div class="social-row">
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4j5C2R4U6H0k8mxn5Q5rK4P6D6s9E7l3KqzUQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

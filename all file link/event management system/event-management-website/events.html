@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Eventora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">Eventora</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero events-hero">
+            <div class="container page-hero-inner">
+                <div>
+                    <h1>Upcoming Events</h1>
+                    <p>Discover our curated lineup of weddings, conferences, concerts, and special occasions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="wedding">Wedding</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate</button>
+                    <button class="filter-btn" data-filter="concert">Concert</button>
+                    <button class="filter-btn" data-filter="birthday">Birthday</button>
+                    <button class="filter-btn" data-filter="conference">Conference</button>
+                </div>
+
+                <div class="grid events-grid events-grid-page">
+                    <article class="event-card filter-item" data-category="wedding">
+                        <div class="event-image">
+                            <img src="images/event-wedding-2.jpg" alt="Sunset Beach Wedding">
+                            <span class="event-tag wedding">Wedding</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Sunset Beach Wedding</h3>
+                            <p>Romantic seaside ceremony with live music and gourmet dining.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 18 Mar 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Malibu, USA</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card filter-item" data-category="corporate conference">
+                        <div class="event-image">
+                            <img src="images/event-conference.jpg" alt="Digital Innovation Summit">
+                            <span class="event-tag conference">Conference</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Digital Innovation Summit</h3>
+                            <p>A two-day conference featuring keynote speakers and interactive workshops.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 05 Apr 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Berlin, Germany</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card filter-item" data-category="concert">
+                        <div class="event-image">
+                            <img src="images/event-concert-2.jpg" alt="Neon Nights Music Fest">
+                            <span class="event-tag concert">Concert</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Neon Nights Music Fest</h3>
+                            <p>Electrifying performances from top DJs with immersive LED stage design.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 20 Apr 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card filter-item" data-category="birthday">
+                        <div class="event-image">
+                            <img src="images/event-birthday.jpg" alt="Fantasy Kids Birthday Bash">
+                            <span class="event-tag birthday">Birthday</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Fantasy Kids Birthday Bash</h3>
+                            <p>Themed decor, live characters, and interactive games for kids.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 02 May 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Toronto, Canada</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card filter-item" data-category="corporate">
+                        <div class="event-image">
+                            <img src="images/event-corporate-2.jpg" alt="Global Leadership Retreat">
+                            <span class="event-tag corporate">Corporate</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Global Leadership Retreat</h3>
+                            <p>Exclusive offsite for executives focused on strategy and team-building.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 15 May 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card filter-item" data-category="concert">
+                        <div class="event-image">
+                            <img src="images/event-concert-3.jpg" alt="City Jazz Nights">
+                            <span class="event-tag concert">Concert</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>City Jazz Nights</h3>
+                            <p>Intimate jazz concert series featuring world-renowned musicians.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 30 May 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> New Orleans, USA</span>
+                            </div>
+                            <a href="booking.html" class="btn primary-btn btn-small">Book Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">Eventora</span>
+                </a>
+                <p>Premium event management company specializing in unforgettable experiences and flawless execution.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Festival Avenue, New City</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@eventora.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; <span id="year"></span> Eventora. All rights reserved.</p>
+                <p>Designed for modern, immersive events.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

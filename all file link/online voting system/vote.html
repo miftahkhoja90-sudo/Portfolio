@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Voting Page · SecureVote Online Voting System</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div class="nav-title-group">
+            <span class="nav-title">SecureVote</span>
+            <span class="nav-subtitle">Online Voting System</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="candidates.html">Candidates</a>
+          <a href="vote.html">Vote</a>
+          <a href="results.html">Results</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a
+            href="login.html"
+            class="btn btn-outline"
+          >
+            <i class="fa-regular fa-user"></i>
+            Login
+          </a>
+          <a
+            href="register.html"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-id-card"></i>
+            Register
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <div class="container">
+        <section>
+          <header class="section-header">
+            <div class="section-kicker">Ballot</div>
+            <h1 class="section-title">Cast your vote</h1>
+            <p class="section-subtitle">
+              Review the candidates and select your preferred option. This demo illustrates
+              the front‑end experience only and does not submit real votes.
+            </p>
+          </header>
+
+          <article class="card">
+            <header class="card-header-row">
+              <div>
+                <h2 class="section-title" style="font-size: 1.1rem; margin-bottom: 4px">
+                  2026 Student Council President
+                </h2>
+                <p class="text-muted" style="font-size: 0.8rem; margin: 0">
+                  Choose <strong>one</strong> candidate. Your vote will be encrypted and
+                  stored anonymously.
+                </p>
+              </div>
+              <span class="pill">
+                <i class="fa-solid fa-clock"></i>
+                Closes in 2 hours
+              </span>
+            </header>
+
+            <form id="voteForm">
+              <div class="vote-list">
+                <label class="vote-option">
+                  <input
+                    type="radio"
+                    name="voteCandidate"
+                    value="Amara Ndlovu"
+                  />
+                  <div class="vote-option-main">
+                    <span><strong>Amara Ndlovu</strong> · Unity Alliance</span>
+                    <span class="vote-option-meta">
+                      Focused on transparency, campus safety and funding for innovation.
+                    </span>
+                  </div>
+                  <span class="tag">Incumbent</span>
+                </label>
+
+                <label class="vote-option">
+                  <input
+                    type="radio"
+                    name="voteCandidate"
+                    value="Daniel Martinez"
+                  />
+                  <div class="vote-option-main">
+                    <span><strong>Daniel Martinez</strong> · Progress Party</span>
+                    <span class="vote-option-meta">
+                      Prioritizing financial support, mental health and equitable housing.
+                    </span>
+                  </div>
+                  <span class="tag">Challenger</span>
+                </label>
+
+                <label class="vote-option">
+                  <input
+                    type="radio"
+                    name="voteCandidate"
+                    value="Leila Chen"
+                  />
+                  <div class="vote-option-main">
+                    <span><strong>Leila Chen</strong> · FutureNow</span>
+                    <span class="vote-option-meta">
+                      Championing digital campus services and student‑led technology.
+                    </span>
+                  </div>
+                  <span class="tag">Challenger</span>
+                </label>
+              </div>
+
+              <div class="vote-meta-row">
+                <div class="form-note">
+                  <i class="fa-solid fa-circle-info"></i>
+                  You can review your choice before final confirmation. Demo does not
+                  store data.
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Submit ballot
+                </button>
+              </div>
+
+              <div
+                id="voteStatus"
+                class="form-error"
+                style="margin-top: 10px"
+              ></div>
+            </form>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <div class="nav-logo">
+                <i class="fa-solid fa-shield-check"></i>
+              </div>
+              <div class="nav-title-group">
+                <span class="nav-title">SecureVote</span>
+                <span class="nav-subtitle">Online Voting System</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 0.82rem">
+              Ballots in a production deployment are end‑to‑end encrypted and can be
+              audited without linking them to individual voters.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Need more info?</h4>
+            <ul class="footer-links">
+              <li><a href="candidates.html">Review candidates</a></li>
+              <li><a href="faq.html">Voting FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">After voting</h4>
+            <ul class="footer-links">
+              <li><a href="voter-dashboard.html">Check your dashboard</a></li>
+              <li><a href="results.html">View live results</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SecureVote. Demo voting page.</span>
+          <div class="social-row">
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4j5C2R4U6H0k8mxn5Q5rK4P6D6s9E7l3KqzUQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

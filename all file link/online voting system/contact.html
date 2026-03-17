@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Contact · SecureVote Online Voting System</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div class="nav-title-group">
+            <span class="nav-title">SecureVote</span>
+            <span class="nav-subtitle">Online Voting System</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="candidates.html">Candidates</a>
+          <a href="vote.html">Vote</a>
+          <a href="results.html">Results</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a
+            href="login.html"
+            class="btn btn-outline"
+          >
+            <i class="fa-regular fa-user"></i>
+            Login
+          </a>
+          <a
+            href="register.html"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-id-card"></i>
+            Register
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <div class="container">
+        <section>
+          <header class="section-header">
+            <div class="section-kicker">Contact</div>
+            <h1 class="section-title">Get in touch with the elections office</h1>
+            <p class="section-subtitle">
+              Use this form to reach your election administrators with questions or to
+              report issues related to the online voting system.
+            </p>
+          </header>
+
+          <div class="contact-layout">
+            <article class="card">
+              <form class="js-demo-form">
+                <div class="form-group">
+                  <label class="form-label">
+                    Full name
+                    <span>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Email address
+                    <span>*</span>
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="you@example.edu"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Subject
+                    <span>*</span>
+                  </label>
+                  <select
+                    class="form-select"
+                    required
+                  >
+                    <option selected disabled>Select a topic</option>
+                    <option>Issue with registration</option>
+                    <option>Problem logging in</option>
+                    <option>Question about voting</option>
+                    <option>Security or privacy concern</option>
+                    <option>General feedback</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Message
+                    <span>*</span>
+                  </label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    placeholder="Describe your question or issue in detail."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-row-between mt-3">
+                  <div class="form-note">
+                    Please avoid sharing sensitive personal information in this form.
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send message
+                  </button>
+                </div>
+              </form>
+            </article>
+
+            <aside class="card-soft">
+              <h2 style="margin-top: 0; font-size: 1rem">
+                <i class="fa-solid fa-phone-volume"></i>
+                Contact details
+              </h2>
+              <div class="contact-meta">
+                <div class="contact-meta-row">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span>elections.office@example.edu</span>
+                </div>
+                <div class="contact-meta-row">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+1 (555) 012‑3456 · Weekdays 09:00‑17:00</span>
+                </div>
+                <div class="contact-meta-row">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Student Services Building, Room 204, City Campus</span>
+                </div>
+              </div>
+
+              <div class="contact-map mt-3">
+                <div class="map-placeholder">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  &nbsp;Map placeholder — embed Google Maps in a real deployment.
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <div class="nav-logo">
+                <i class="fa-solid fa-shield-check"></i>
+              </div>
+              <div class="nav-title-group">
+                <span class="nav-title">SecureVote</span>
+                <span class="nav-subtitle">Online Voting System</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 0.82rem">
+              Your feedback helps improve the clarity, accessibility and security of
+              future elections.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Useful links</h4>
+            <ul class="footer-links">
+              <li><a href="faq.html">Read the FAQ</a></li>
+              <li><a href="results.html">Check results</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 0.9rem">Emergency</h4>
+            <ul class="footer-links">
+              <li>For urgent issues, call +1 (555) 012‑3456.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SecureVote. Demo contact page.</span>
+          <div class="social-row">
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4j5C2R4U6H0k8mxn5Q5rK4P6D6s9E7l3KqzUQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
